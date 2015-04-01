@@ -764,6 +764,7 @@ proc restore { { project_dir "" } } {
   } "A problem occured while restoring project settings."
 
   set user_files { 
+      "IRQControl.vhd" 
       "Latch_De_Direcciones.vhd" 
       "Reg_de_Paginacion.vhd" 
       "Trans_Datos.vhd" 
