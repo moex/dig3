@@ -1,0 +1,7 @@
+V3 3
+FL "E:/Agus/Facultad/Digital 3/dig3/Reloj.vhd" 2015/04/01.14:38:59 J.36
+EN work/Reloj 1427909941 FL "E:/Agus/Facultad/Digital 3/dig3/Reloj.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/Reloj/Behavioral 1427909942 \
+      FL "E:/Agus/Facultad/Digital 3/dig3/Reloj.vhd" EN work/Reloj 1427909941

@@ -1,0 +1,9 @@
+[Inputs]
+Clk
+IOReady
+ResetIN
+[Outputs]
+Mclk
+Ready
+ResetOUT
+[BiDir]
