@@ -1,0 +1,37 @@
+ command line:
+   ./TestTrans_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  52577
+
+Wed Apr 01 22:01:52 2015
+
+Total Line Count : 46
+
+ Elaboration time : 0.0156 sec.
+
+ Estimate current memory usage : 149.594 Meg. 
+
+ Total Signals          : 8
+ Total Nets             : 34
+ Total Signal Drivers   : 6
+ Total Blocks           : 7
+ Total Primitive Blocks : 1
+ Total Processes        : 3
+ Total Traceable Variables  : 0
+ Total Scalar Nets and Variables : 34
+ntrace select -o on -n /TestTrans/datin 
+ntrace select -o on -n /TestTrans/datout 
+ntrace select -o on -n /TestTrans/dtr 
+ntrace select -o on -n /TestTrans/den 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Simulation time 0.0624 sec.
+
+ Estimate current memory usage : 158.769 Meg. 
+
+Wed Apr 01 22:31:54 2015
+

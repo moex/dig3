@@ -1,0 +1,6 @@
+EN reloj NULL C:/Dig3/dig3/TUVIEJAENTANGA/Reloj.vhd sub00/vhpl00 1427934077
+EN irqcontrol NULL C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd sub00/vhpl04 1427938252
+AR reloj nadadezurdos C:/Dig3/dig3/TUVIEJAENTANGA/Reloj.vhd sub00/vhpl01 1427934078
+AR irqcontrol behavioral C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd sub00/vhpl05 1427938253
+AR testclock_selfcheck_beh testbench_arch C:/Dig3/dig3/TUVIEJAENTANGA/Testclock_selfcheck_beh.vhd sub00/vhpl03 1427931533
+EN testclock_selfcheck_beh NULL C:/Dig3/dig3/TUVIEJAENTANGA/Testclock_selfcheck_beh.vhd sub00/vhpl02 1427931532

@@ -1,0 +1,61 @@
+V3 28
+FL C:/Dig3/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd 2015/03/25.21:50:50 J.40
+EN work/Trans_Datos 1427935941 FL C:/Dig3/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd \
+      PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
+      PB ieee/STD_LOGIC_UNSIGNED 1194562362
+AR work/Trans_Datos/PACO2 1427935942 \
+      FL C:/Dig3/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd EN work/Trans_Datos 1427935941
+FL C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd 2015/04/01.19:34:44 J.40
+EN work/IRQControl 1427930645 FL C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd \
+      PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
+      PB ieee/STD_LOGIC_UNSIGNED 1194562362
+AR work/IRQControl/Behavioral 1427930646 \
+      FL C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd EN work/IRQControl 1427930645
+FL C:/Dig3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd 2015/03/25.21:34:17 J.40
+EN work/Latch_De_Direcciones 1427935546 \
+      FL C:/Dig3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd \
+      PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
+      PB ieee/STD_LOGIC_UNSIGNED 1194562362
+AR work/Latch_De_Direcciones/PACO 1427935547 \
+      FL C:/Dig3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd \
+      EN work/Latch_De_Direcciones 1427935546
+FL C:/Dig3/dig3/TUVIEJAENTANGA/Reloj.vhd 2015/04/01.21:36:28 J.40
+EN work/Reloj 1427934994 FL C:/Dig3/dig3/TUVIEJAENTANGA/Reloj.vhd \
+      PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
+      PB ieee/STD_LOGIC_UNSIGNED 1194562362
+AR work/Reloj/NADADEZURDOS 1427934995 \
+      FL C:/Dig3/dig3/TUVIEJAENTANGA/Reloj.vhd EN work/Reloj 1427934994
+FL C:/Dig3/dig3/TUVIEJAENTANGA/Testclock.ant 2015/04/01.20:26:44 J.40
+FL C:/Dig3/dig3/TUVIEJAENTANGA/Testclock.vhw 2015/04/01.21:23:27 J.40
+EN work/Testclock 1427934996 FL C:/Dig3/dig3/TUVIEJAENTANGA/Testclock.vhw \
+      PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
+      PB ieee/STD_LOGIC_UNSIGNED 1194562362 PB ieee/STD_LOGIC_TEXTIO 1194562364 \
+      PB std/textio 1194562348
+AR work/Testclock/testbench_arch 1427934997 \
+      FL C:/Dig3/dig3/TUVIEJAENTANGA/Testclock.vhw EN work/Testclock 1427934996 \
+      CP Reloj
+FL C:/Dig3/dig3/TUVIEJAENTANGA/Testclock_selfcheck_beh.vhd 2015/04/01.20:26:51 J.40
+EN work/Testclock_selfcheck_beh 1427931767 \
+      FL C:/Dig3/dig3/TUVIEJAENTANGA/Testclock_selfcheck_beh.vhd \
+      PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
+      PB ieee/STD_LOGIC_UNSIGNED 1194562362 PB ieee/STD_LOGIC_TEXTIO 1194562364 \
+      PB std/textio 1194562348
+AR work/Testclock_selfcheck_beh/testbench_arch 1427931768 \
+      FL C:/Dig3/dig3/TUVIEJAENTANGA/Testclock_selfcheck_beh.vhd \
+      EN work/Testclock_selfcheck_beh 1427931767 CP Reloj PB ieee/STD_LOGIC_TEXTIO 1194562364
+FL C:/Dig3/dig3/TUVIEJAENTANGA/TestLatch.vhw 2015/04/01.21:45:36 J.40
+EN work/TestLatch 1427935548 FL C:/Dig3/dig3/TUVIEJAENTANGA/TestLatch.vhw \
+      PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
+      PB ieee/STD_LOGIC_UNSIGNED 1194562362 PB ieee/STD_LOGIC_TEXTIO 1194562364 \
+      PB std/textio 1194562348
+AR work/TestLatch/testbench_arch 1427935549 \
+      FL C:/Dig3/dig3/TUVIEJAENTANGA/TestLatch.vhw EN work/TestLatch 1427935548 \
+      CP Latch_De_Direcciones
+FL C:/Dig3/dig3/TUVIEJAENTANGA/TestTrans.vhw 2015/04/01.22:01:47 J.40
+EN work/TestTrans 1427936510 FL C:/Dig3/dig3/TUVIEJAENTANGA/TestTrans.vhw \
+      PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
+      PB ieee/STD_LOGIC_UNSIGNED 1194562362 PB ieee/STD_LOGIC_TEXTIO 1194562364 \
+      PB std/textio 1194562348
+AR work/TestTrans/testbench_arch 1427936511 \
+      FL C:/Dig3/dig3/TUVIEJAENTANGA/TestTrans.vhw EN work/TestTrans 1427936510 \
+      CP Trans_Datos

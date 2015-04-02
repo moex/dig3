@@ -1,7 +1,15 @@
-V3 3
-FL "E:/Agus/Facultad/Digital 3/dig3/Reloj.vhd" 2015/04/01.14:38:59 J.36
-EN work/Reloj 1427909941 FL "E:/Agus/Facultad/Digital 3/dig3/Reloj.vhd" \
+V3 8
+FL C:/Dig3/dig3/IRQControl.vhd 2015/04/01.19:34:44 J.40
+EN work/IRQControl 1427928680 FL C:/Dig3/dig3/IRQControl.vhd \
       PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
       PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/Reloj/Behavioral 1427909942 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/Reloj.vhd" EN work/Reloj 1427909941
+AR work/IRQControl/Behavioral 1427928681 \
+      FL C:/Dig3/dig3/IRQControl.vhd EN work/IRQControl 1427928680
+FL C:/Dig3/dig3/Reloj.vhd 2015/04/01.19:51:16 J.40
+EN work/Reloj 1427930069 FL C:/Dig3/dig3/Reloj.vhd PB ieee/std_logic_1164 1177545575 \
+      PB ieee/std_logic_arith 1177545576 PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/Reloj/NADADEZURDOS 1427930070 \
+      FL C:/Dig3/dig3/Reloj.vhd EN work/Reloj 1427930069
+FL "E:/Agus/Facultad/Digital 3/dig3/Reloj.vhd" 2015/04/01.14:38:59 J.40
+AR work/Reloj/Behavioral -1 FL "E:/Agus/Facultad/Digital 3/dig3/Reloj.vhd" \
+      EN work/Reloj 1427930069

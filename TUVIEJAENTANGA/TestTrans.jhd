@@ -1,0 +1,3 @@
+MODULE TestTrans
+SUBMODULE Trans_Datos
+INSTANCE UUT

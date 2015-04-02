@@ -1,0 +1,2 @@
+vhdl work "../Trans_Datos.vhd"
+vhdl work "TestTrans.vhw"

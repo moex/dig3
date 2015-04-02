@@ -1,0 +1,12 @@
+EN reloj NULL C:/Dig3/dig3/Reloj.vhd sub00/vhpl06 1427928706
+EN reg_de_paginacion NULL C:/Dig3/dig3/Reg_de_Paginacion.vhd sub00/vhpl04 1427928704
+AR schematic behavioral C:/Dig3/dig3/schematic.vhf sub00/vhpl09 1427928709
+AR reg_de_paginacion fermin C:/Dig3/dig3/Reg_de_Paginacion.vhd sub00/vhpl05 1427928705
+EN testclock NULL C:/Dig3/dig3/TestClock.ant sub00/vhpl10 1427929974
+EN schematic NULL C:/Dig3/dig3/schematic.vhf sub00/vhpl08 1427928708
+EN trans_datos NULL C:/Dig3/dig3/Trans_Datos.vhd sub00/vhpl02 1427928702
+AR trans_datos paco2 C:/Dig3/dig3/Trans_Datos.vhd sub00/vhpl03 1427928703
+AR testclock testbench_arch C:/Dig3/dig3/TestClock.ant sub00/vhpl11 1427929975
+AR latch_de_direcciones paco C:/Dig3/dig3/Latch_De_Direcciones.vhd sub00/vhpl01 1427928701
+AR reloj nadadezurdos C:/Dig3/dig3/Reloj.vhd sub00/vhpl07 1427928707
+EN latch_de_direcciones NULL C:/Dig3/dig3/Latch_De_Direcciones.vhd sub00/vhpl00 1427928700

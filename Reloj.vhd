@@ -36,7 +36,7 @@ entity Reloj is
            ResetOUT : out  STD_LOGIC);
 end Reloj;
 
-architecture Behavioral of Reloj is
+architecture NADADEZURDOS of Reloj is
 	signal Count : std_logic_vector (1 downto 0);
 	signal resetclk, resetf, readyf, TCR, RRC : std_logic;
 	signal Resetcount : std_logic_vector (1 downto 0);
@@ -84,5 +84,5 @@ begin
 	ResetOUT <= '1' when resetf = '1' else '0';
 	Ready <= '1' when readyf = '1' else '0';		
 			
-end Behavioral;
+end NADADEZURDOS;
 

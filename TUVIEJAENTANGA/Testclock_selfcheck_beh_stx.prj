@@ -1,0 +1,2 @@
+vhdl isim_temp "Reloj.vhd"
+vhdl isim_temp "Testclock_selfcheck_beh.vhd"

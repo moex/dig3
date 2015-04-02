@@ -1,0 +1,9 @@
+MODULE schematic
+	SUBMODULE Latch_De_Direcciones
+		INSTANCE XLXI_1
+	SUBMODULE Trans_Datos
+		INSTANCE XLXI_2
+	SUBMODULE Reg_de_Paginacion
+		INSTANCE XLXI_3
+	SUBMODULE Reloj
+		INSTANCE XLXI_6

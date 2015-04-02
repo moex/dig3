@@ -1,0 +1,3 @@
+MODULE Testclovk
+SUBMODULE Reloj
+INSTANCE UUT

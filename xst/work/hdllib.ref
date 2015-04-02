@@ -1,2 +1,5 @@
-EN reloj NULL "E:/Agus/Facultad/Digital 3/dig3/Reloj.vhd" sub00/vhpl00 1427909941
+EN reloj NULL C:/Dig3/dig3/Reloj.vhd sub00/vhpl00 1427930069
+EN irqcontrol NULL C:/Dig3/dig3/IRQControl.vhd sub00/vhpl02 1427928680
 AR reloj behavioral "E:/Agus/Facultad/Digital 3/dig3/Reloj.vhd" sub00/vhpl01 1427909942
+AR reloj nadadezurdos C:/Dig3/dig3/Reloj.vhd sub00/vhpl04 1427930070
+AR irqcontrol behavioral C:/Dig3/dig3/IRQControl.vhd sub00/vhpl03 1427928681

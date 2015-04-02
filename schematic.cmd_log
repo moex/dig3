@@ -1,0 +1,1 @@
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Dig3/dig3/schematic.sch" schematic.vhf
