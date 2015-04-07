@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 9.2.04i
 --  \   \         Application : sch2vhdl
 --  /   /         Filename : schematic.vhf
--- /___/   /\     Timestamp : 04/01/2015 20:19:07
+-- /___/   /\     Timestamp : 04/06/2015 21:32:11
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -37,6 +37,7 @@ entity schematic is
           ReadyIN    : in    std_logic; 
           Reset      : in    std_logic; 
           WR         : in    std_logic; 
+          XLXN_73    : in    std_logic; 
           ADComp     : out   std_logic_vector (19 downto 0); 
           CHIPs      : out   std_logic_vector (2 downto 0); 
           ClkMicro   : out   std_logic; 
@@ -50,9 +51,15 @@ end schematic;
 architecture BEHAVIORAL of schematic is
    attribute BOX_TYPE   : string ;
    attribute INIT       : string ;
-   signal BHEL         : std_logic;
-   signal ADComp_DUMMY : std_logic_vector (19 downto 0);
-   signal ADl_DUMMY    : std_logic_vector (15 downto 0);
+   signal BHEL             : std_logic;
+   signal XLXN_74          : std_logic;
+   signal XLXN_75          : std_logic;
+   signal XLXN_76          : std_logic_vector (7 downto 0);
+   signal XLXN_77          : std_logic;
+   signal ClkMicro_DUMMY   : std_logic;
+   signal ResetMicro_DUMMY : std_logic;
+   signal ADComp_DUMMY     : std_logic_vector (19 downto 0);
+   signal ADl_DUMMY        : std_logic_vector (15 downto 0);
    component Latch_De_Direcciones
       port ( ALE  : in    std_logic; 
              Dirh : in    std_logic_vector (3 downto 0); 
@@ -102,8 +109,23 @@ architecture BEHAVIORAL of schematic is
    attribute INIT of LD : component is "0";
    attribute BOX_TYPE of LD : component is "BLACK_BOX";
    
+   component IRQControl
+      port ( Reset : in    std_logic; 
+             Clk   : in    std_logic; 
+             IRQA  : in    std_logic; 
+             RD    : in    std_logic; 
+             RW    : in    std_logic; 
+             RS    : in    std_logic; 
+             IRQ   : in    std_logic_vector (7 downto 0); 
+             Dir   : in    std_logic_vector (19 downto 0); 
+             IRQR  : out   std_logic; 
+             Data  : inout std_logic_vector (7 downto 0));
+   end component;
+   
 begin
    ADComp(19 downto 0) <= ADComp_DUMMY(19 downto 0);
+   ClkMicro <= ClkMicro_DUMMY;
+   ResetMicro <= ResetMicro_DUMMY;
    ADl_DUMMY(15 downto 0) <= ADl(15 downto 0);
    XLXI_1 : Latch_De_Direcciones
       port map (ALE=>Ale,
@@ -138,14 +160,26 @@ begin
       port map (Clk=>CLK,
                 IOReady=>ReadyIN,
                 ResetIN=>Reset,
-                Mclk=>ClkMicro,
+                Mclk=>ClkMicro_DUMMY,
                 Ready=>ReadyMicro,
-                ResetOUT=>ResetMicro);
+                ResetOUT=>ResetMicro_DUMMY);
    
    XLXI_13 : LD
       port map (D=>BHE,
                 G=>Ale,
                 Q=>BHEL);
+   
+   XLXI_14 : IRQControl
+      port map (Clk=>ClkMicro_DUMMY,
+                Dir(19 downto 0)=>ADComp_DUMMY(19 downto 0),
+                IRQ(7 downto 0)=>XLXN_76(7 downto 0),
+                IRQA=>XLXN_77,
+                RD=>XLXN_73,
+                Reset=>ResetMicro_DUMMY,
+                RS=>XLXN_74,
+                RW=>XLXN_75,
+                IRQR=>open,
+                Data(7 downto 0)=>Puertos(7 downto 0));
    
 end BEHAVIORAL;
 

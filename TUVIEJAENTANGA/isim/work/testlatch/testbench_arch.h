@@ -23,7 +23,6 @@ class Work_testlatch_testbench_arch: public HSim__s6 {
 public:
 
 
-HSimFileVar Results;
     HSim__s1 SA[4];
     Work_testlatch_testbench_arch(const char * name);
     ~Work_testlatch_testbench_arch();

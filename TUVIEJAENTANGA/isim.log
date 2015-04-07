@@ -1,37 +1,51 @@
  command line:
-   ./TestTrans_isim_beh.exe
+   ./TEST1_TB_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  52577
+     -ipcport  60362
 
-Wed Apr 01 22:01:52 2015
+Mon Apr 06 22:48:25 2015
 
-Total Line Count : 46
+Total Line Count : 103
 
- Elaboration time : 0.0156 sec.
+ Elaboration time : 0 sec.
 
- Estimate current memory usage : 149.594 Meg. 
+ Estimate current memory usage : 149.615 Meg. 
 
- Total Signals          : 8
- Total Nets             : 34
- Total Signal Drivers   : 6
+ Total Signals          : 25
+ Total Nets             : 71
+ Total Signal Drivers   : 17
  Total Blocks           : 7
  Total Primitive Blocks : 1
- Total Processes        : 3
+ Total Processes        : 9
  Total Traceable Variables  : 0
- Total Scalar Nets and Variables : 34
-ntrace select -o on -n /TestTrans/datin 
-ntrace select -o on -n /TestTrans/datout 
-ntrace select -o on -n /TestTrans/dtr 
-ntrace select -o on -n /TestTrans/den 
+ Total Scalar Nets and Variables : 71
+ntrace select -o on -n /TEST1_TB/clk 
+ntrace select -o on -n /TEST1_TB/reset 
+ntrace select -o on -n /TEST1_TB/irqr 
+ntrace select -o on -n /TEST1_TB/irq 
+ntrace select -o on -n /TEST1_TB/UUT/cuenta 
+ntrace select -o on -n /TEST1_TB/UUT/flag 
+ntrace select -o on -n /TEST1_TB/UUT/end1 
+ntrace select -o on -n /TEST1_TB/irqa 
+ntrace select -o on -n /TEST1_TB/rd 
+ntrace select -o on -n /TEST1_TB/rw 
+ntrace select -o on -n /TEST1_TB/data 
+ntrace select -o on -n /TEST1_TB/dir 
+ntrace select -o on -n /TEST1_TB/UUT/irqe 
+ntrace select -o on -n /TEST1_TB/UUT/irqt 
 ntrace start 
 isimrun 1000 ns 
 Simulator is doing circuit initialization process.
+WARNING:Simulator:29 - at 0 ns: Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an
+   arithmetic operand, the result will be 'X'(es).
 Finished circuit initialization process.
+isimrun 10000 ns 
+isimstep 
 
- Simulation time 0.0624 sec.
+ Simulation time 0.1248 sec.
 
- Estimate current memory usage : 158.769 Meg. 
+ Estimate current memory usage : 158.79 Meg. 
 
-Wed Apr 01 22:31:54 2015
+Mon Apr 06 22:58:52 2015
 

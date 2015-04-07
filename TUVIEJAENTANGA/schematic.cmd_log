@@ -1,1 +1,4 @@
 sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Dig3/dig3/TUVIEJAENTANGA/schematic.sch" schematic.vhf
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Dig3/dig3/TUVIEJAENTANGA/schematic.sch" schematic.vhf
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Dig3/dig3/TUVIEJAENTANGA/schematic.sch" schematic.vhf
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Dig3/dig3/TUVIEJAENTANGA/schematic.sch" schematic.vhf

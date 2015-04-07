@@ -24,6 +24,13 @@ public:
 
     HSim__s1 SE[9];
 
+    HSim__s1 SA[7];
+  char t0;
+  char *t1;
+  char t2;
+HSimConstraints *c3;
+  char t4;
+  char t5;
     Work_irqcontrol_behavioral(const char * name);
     ~Work_irqcontrol_behavioral();
     void constructObject();
