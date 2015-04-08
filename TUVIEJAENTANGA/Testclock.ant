@@ -5,10 +5,10 @@
 --   ____  ____ 
 --  /   /\/   / 
 -- /___/  \  /    Vendor: Xilinx 
--- \   \   \/     Version : 9.2.04i
+-- \   \   \/     Version : 9.2i
 --  \   \         Application : ISE
 --  /   /         Filename : Testclock.ant
--- /___/   /\     Timestamp : Wed Apr 01 21:23:27 2015
+-- /___/   /\     Timestamp : Wed Apr 08 15:14:05 2015
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -28,7 +28,7 @@ ENTITY Testclock IS
 END Testclock;
 
 ARCHITECTURE testbench_arch OF Testclock IS
-    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Dig3\dig3\TUVIEJAENTANGA\Testclock.ano";
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Users\Nacho\Documents\GitHub\dig3\TUVIEJAENTANGA\Testclock.ano";
 
     COMPONENT Reloj
         PORT (

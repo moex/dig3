@@ -7,13 +7,13 @@
 -- /___/  \  /    Vendor: Xilinx 
 -- \   \   \/     Version : 9.2i
 --  \   \         Application : ISE
---  /   /         Filename : Test1_TB.ant
--- /___/   /\     Timestamp : Wed Apr 08 10:43:58 2015
+--  /   /         Filename : TEST1_TB.ant
+-- /___/   /\     Timestamp : Wed Apr 08 14:58:05 2015
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
 --Command: 
---Design Name: Test1_TB
+--Design Name: TEST1_TB
 --Device: Xilinx
 --
 
@@ -24,11 +24,11 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE IEEE.STD_LOGIC_TEXTIO.ALL;
 USE STD.TEXTIO.ALL;
 
-ENTITY Test1_TB IS
-END Test1_TB;
+ENTITY TEST1_TB IS
+END TEST1_TB;
 
-ARCHITECTURE testbench_arch OF Test1_TB IS
-    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Users\Nacho\Documents\GitHub\dig3\TUVIEJAENTANGA\Test1_TB.ano";
+ARCHITECTURE testbench_arch OF TEST1_TB IS
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Users\Nacho\Documents\GitHub\dig3\TUVIEJAENTANGA\TEST1_TB.ano";
 
     COMPONENT IRQControl
         PORT (
@@ -154,7 +154,7 @@ ARCHITECTURE testbench_arch OF Test1_TB IS
                 -- -------------------------------------
                 -- -------------  Current Time:  1109ns
                 WAIT FOR 80 ns;
-                IRQ <= "00000011";
+                IRQ <= "00000111";
                 -- -------------------------------------
                 -- -------------  Current Time:  1349ns
                 WAIT FOR 240 ns;

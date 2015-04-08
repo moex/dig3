@@ -4,11 +4,11 @@ static const char * HSimCopyRightNotice = "Copyright 2004-2005, Xilinx Inc. All 
 #else
 #include "xsim.h"
 #endif
-#include "C:/Xilinx92i/vhdl/hdp/nt/ieee/std_logic_1164/std_logic_1164.h"
-#include "C:/Xilinx92i/vhdl/hdp/nt/ieee/std_logic_arith/std_logic_arith.h"
-#include "C:/Xilinx92i/vhdl/hdp/nt/std/textio/textio.h"
-#include "C:/Xilinx92i/vhdl/hdp/nt/ieee/std_logic_unsigned/std_logic_unsigned.h"
-#include "C:/Xilinx92i/vhdl/hdp/nt/ieee/std_logic_textio/std_logic_textio.h"
+#include "C:/Program Files (x86)/Xilinx/vhdl/hdp/nt/ieee/std_logic_1164/std_logic_1164.h"
+#include "C:/Program Files (x86)/Xilinx/vhdl/hdp/nt/ieee/std_logic_arith/std_logic_arith.h"
+#include "C:/Program Files (x86)/Xilinx/vhdl/hdp/nt/std/textio/textio.h"
+#include "C:/Program Files (x86)/Xilinx/vhdl/hdp/nt/ieee/std_logic_unsigned/std_logic_unsigned.h"
+#include "C:/Program Files (x86)/Xilinx/vhdl/hdp/nt/ieee/std_logic_textio/std_logic_textio.h"
 
 class _top : public HSim__s6 {
 public:

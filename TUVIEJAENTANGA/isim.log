@@ -1,50 +1,34 @@
  command line:
-   ./Test1_TB_isim_beh.exe
+   ./Testclock_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  50712
+     -ipcport  54668
 
-Wed Apr 08 10:32:26 2015
+Wed Apr 08 15:14:08 2015
 
-Total Line Count : 116
+Total Line Count : 75
 
- Elaboration time : 0.0312 sec.
+ Elaboration time : 0 sec.
 
- Estimate current memory usage : 153.764 Meg. 
+ Estimate current memory usage : 153.756 Meg. 
 
- Total Signals          : 26
- Total Nets             : 79
- Total Signal Drivers   : 18
+ Total Signals          : 19
+ Total Nets             : 19
+ Total Signal Drivers   : 12
  Total Blocks           : 7
  Total Primitive Blocks : 1
- Total Processes        : 10
+ Total Processes        : 9
  Total Traceable Variables  : 0
- Total Scalar Nets and Variables : 79
-ntrace select -o on -n /TEST1_TB/clk 
-ntrace select -o on -n /TEST1_TB/reset 
-ntrace select -o on -n /TEST1_TB/irqr 
-ntrace select -o on -n /TEST1_TB/irq 
-ntrace select -o on -n /TEST1_TB/UUT/cuenta 
-ntrace select -o on -n /TEST1_TB/UUT/flag 
-ntrace select -o on -n /TEST1_TB/UUT/end1 
-ntrace select -o on -n /TEST1_TB/irqa 
-ntrace select -o on -n /TEST1_TB/rd 
-ntrace select -o on -n /TEST1_TB/rw 
-ntrace select -o on -n /TEST1_TB/data 
-ntrace select -o on -n /TEST1_TB/dir 
-ntrace select -o on -n /TEST1_TB/UUT/irqe 
-ntrace select -o on -n /TEST1_TB/UUT/irqt 
+ Total Scalar Nets and Variables : 19
+ntrace select -o on -n /Testclock/clk 
+ntrace select -o on -n /Testclock/mclk 
+ntrace select -o on -n /Testclock/ready 
+ntrace select -o on -n /Testclock/ioready 
+ntrace select -o on -n /Testclock/resetin 
+ntrace select -o on -n /Testclock/resetout 
+ntrace select -o on -n /Testclock/UUT/count 
+ntrace select -o on -n /Testclock/UUT/resetcount 
 ntrace start 
 isimrun 1000 ns 
 Simulator is doing circuit initialization process.
-WARNING:Simulator:29 - at 0 ns: Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an
-   arithmetic operand, the result will be 'X'(es).
 Finished circuit initialization process.
-isimrun 4000 ns 
-
- Simulation time 0.1248 sec.
-
- Estimate current memory usage : 162.939 Meg. 
-
-Wed Apr 08 10:44:05 2015
-

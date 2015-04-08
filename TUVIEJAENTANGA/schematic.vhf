@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 9.2i
 --  \   \         Application : sch2vhdl
 --  /   /         Filename : schematic.vhf
--- /___/   /\     Timestamp : 04/08/2015 10:24:56
+-- /___/   /\     Timestamp : 04/08/2015 14:58:05
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -31,17 +31,20 @@ entity schematic is
           Ale        : in    std_logic; 
           BHE        : in    std_logic; 
           CLK        : in    std_logic; 
-          DEN        : in    std_logic; 
           DTR        : in    std_logic; 
+          INTA       : in    std_logic; 
+          IRQ        : in    std_logic_vector (7 downto 0); 
           MIO        : in    std_logic; 
+          RD         : in    std_logic; 
           ReadyIN    : in    std_logic; 
           Reset      : in    std_logic; 
+          RW         : in    std_logic; 
           WR         : in    std_logic; 
-          XLXN_73    : in    std_logic; 
           ADComp     : out   std_logic_vector (19 downto 0); 
           CHIPs      : out   std_logic_vector (2 downto 0); 
           ClkMicro   : out   std_logic; 
           HighW      : out   std_logic; 
+          INTR       : out   std_logic; 
           LowW       : out   std_logic; 
           ReadyMicro : out   std_logic; 
           ResetMicro : out   std_logic; 
@@ -52,10 +55,6 @@ architecture BEHAVIORAL of schematic is
    attribute BOX_TYPE   : string ;
    attribute INIT       : string ;
    signal BHEL             : std_logic;
-   signal XLXN_74          : std_logic;
-   signal XLXN_75          : std_logic;
-   signal XLXN_76          : std_logic_vector (7 downto 0);
-   signal XLXN_77          : std_logic;
    signal ClkMicro_DUMMY   : std_logic;
    signal ResetMicro_DUMMY : std_logic;
    signal ADComp_DUMMY     : std_logic_vector (19 downto 0);
@@ -115,10 +114,9 @@ architecture BEHAVIORAL of schematic is
              IRQA  : in    std_logic; 
              RD    : in    std_logic; 
              RW    : in    std_logic; 
-             RS    : in    std_logic; 
+             IRQR  : out   std_logic; 
              IRQ   : in    std_logic_vector (7 downto 0); 
              Dir   : in    std_logic_vector (19 downto 0); 
-             IRQR  : out   std_logic; 
              Data  : inout std_logic_vector (7 downto 0));
    end component;
    
@@ -134,7 +132,7 @@ begin
                 S(19 downto 0)=>ADComp_DUMMY(19 downto 0));
    
    XLXI_2 : Trans_Datos
-      port map (Den=>DEN,
+      port map (Den=>BHE,
                 Dtr=>DTR,
                 Datin(15 downto 0)=>ADl_DUMMY(15 downto 0),
                 Datout(15 downto 0)=>Puertos(15 downto 0));
@@ -172,13 +170,12 @@ begin
    XLXI_14 : IRQControl
       port map (Clk=>ClkMicro_DUMMY,
                 Dir(19 downto 0)=>ADComp_DUMMY(19 downto 0),
-                IRQ(7 downto 0)=>XLXN_76(7 downto 0),
-                IRQA=>XLXN_77,
-                RD=>XLXN_73,
+                IRQ(7 downto 0)=>IRQ(7 downto 0),
+                IRQA=>INTA,
+                RD=>RD,
                 Reset=>ResetMicro_DUMMY,
-                RS=>XLXN_74,
-                RW=>XLXN_75,
-                IRQR=>open,
+                RW=>RW,
+                IRQR=>INTR,
                 Data(7 downto 0)=>Puertos(7 downto 0));
    
 end BEHAVIORAL;

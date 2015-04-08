@@ -1,34 +1,52 @@
-V3 19
-FL C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd 2015/04/06.22:48:16 J.36
-FL C:/Dig3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd 2015/03/25.21:34:17 J.36
-EN work/Latch_De_Direcciones 1428366866 \
-      FL C:/Dig3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd \
-      PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
-      PB ieee/STD_LOGIC_UNSIGNED 1194562362
-AR work/Latch_De_Direcciones/PACO 1428366867 \
-      FL C:/Dig3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd \
-      EN work/Latch_De_Direcciones 1428366866
-FL C:/Dig3/dig3/TUVIEJAENTANGA/Reloj.vhd 2015/04/01.21:36:28 J.36
-EN work/Reloj 1428368526 FL C:/Dig3/dig3/TUVIEJAENTANGA/Reloj.vhd \
-      PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
-      PB ieee/STD_LOGIC_UNSIGNED 1194562362
-AR work/Reloj/NADADEZURDOS 1428368527 \
-      FL C:/Dig3/dig3/TUVIEJAENTANGA/Reloj.vhd EN work/Reloj 1428368526
-FL C:/Dig3/dig3/TUVIEJAENTANGA/TEST1_TB.vhw 2015/04/06.22:42:38 J.36
-FL C:/Dig3/dig3/TUVIEJAENTANGA/TestLatch.vhw 2015/04/06.21:34:26 J.36
-EN work/TestLatch 1428366868 FL C:/Dig3/dig3/TUVIEJAENTANGA/TestLatch.vhw \
-      PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
-      PB ieee/STD_LOGIC_UNSIGNED 1194562362 PB ieee/STD_LOGIC_TEXTIO 1194562364 \
-      PB std/textio 1194562348
-AR work/TestLatch/testbench_arch 1428366869 \
-      FL C:/Dig3/dig3/TUVIEJAENTANGA/TestLatch.vhw EN work/TestLatch 1428366868 \
-      CP Latch_De_Direcciones
-FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd 2015/04/08.10:30:32 J.36
-EN work/IRQControl 1428499942 \
+V3 21
+FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd 2015/04/08.13:41:28 J.36
+EN work/IRQControl 1428515886 \
       FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd \
-      PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
-      PB ieee/STD_LOGIC_UNSIGNED 1194562362
-AR work/IRQControl/Behavioral 1428499943 \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/IRQControl/Behavioral 1428515887 \
       FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd \
-      EN work/IRQControl 1428499942
-FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Test1_TB.vhw 2015/04/08.10:29:01 J.36
+      EN work/IRQControl 1428515886
+FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd 2015/04/06.17:31:31 J.36
+EN work/Latch_De_Direcciones 1428516582 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/Latch_De_Direcciones/PACO 1428516583 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd \
+      EN work/Latch_De_Direcciones 1428516582
+FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reloj.vhd 2015/04/06.17:31:32 J.36
+EN work/Reloj 1428516846 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reloj.vhd \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/Reloj/NADADEZURDOS 1428516847 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reloj.vhd \
+      EN work/Reloj 1428516846
+FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TEST1_TB.vhw 2015/04/08.14:58:05 J.36
+EN work/TEST1_TB 1428515888 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TEST1_TB.vhw \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991 PB ieee/STD_LOGIC_TEXTIO 1179176993 \
+      PB std/textio 1179176969
+AR work/TEST1_TB/testbench_arch 1428515889 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TEST1_TB.vhw \
+      EN work/TEST1_TB 1428515888 CP IRQControl
+FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Testclock.vhw 2015/04/08.15:14:05 J.36
+EN work/Testclock 1428516848 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Testclock.vhw \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991 PB ieee/STD_LOGIC_TEXTIO 1179176993 \
+      PB std/textio 1179176969
+AR work/Testclock/testbench_arch 1428516849 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Testclock.vhw \
+      EN work/Testclock 1428516848 CP Reloj
+FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TestLatch.vhw 2015/04/08.15:09:40 J.36
+EN work/TestLatch 1428516584 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TestLatch.vhw \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991 PB ieee/STD_LOGIC_TEXTIO 1179176993 \
+      PB std/textio 1179176969
+AR work/TestLatch/testbench_arch 1428516585 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TestLatch.vhw \
+      EN work/TestLatch 1428516584 CP Latch_De_Direcciones

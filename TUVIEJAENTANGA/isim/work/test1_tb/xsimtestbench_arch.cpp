@@ -6,7 +6,9 @@ static const char * HSimCopyRightNotice = "Copyright 2004-2005, Xilinx Inc. All 
 #endif
 #include "C:/Program Files (x86)/Xilinx/vhdl/hdp/nt/ieee/std_logic_1164/std_logic_1164.h"
 #include "C:/Program Files (x86)/Xilinx/vhdl/hdp/nt/ieee/std_logic_arith/std_logic_arith.h"
+#include "C:/Program Files (x86)/Xilinx/vhdl/hdp/nt/std/textio/textio.h"
 #include "C:/Program Files (x86)/Xilinx/vhdl/hdp/nt/ieee/std_logic_unsigned/std_logic_unsigned.h"
+#include "C:/Program Files (x86)/Xilinx/vhdl/hdp/nt/ieee/std_logic_textio/std_logic_textio.h"
 
 class _top : public HSim__s6 {
 public:
@@ -18,7 +20,7 @@ public:
 
         HSim__s6 * topvh = 0;
         extern HSim__s6 * createWork_test1_tb_testbench_arch(const char*);
-        topvh = createWork_test1_tb_testbench_arch("Test1_TB");
+        topvh = createWork_test1_tb_testbench_arch("TEST1_TB");
         topvh->constructPorts();
         topvh->checkTopLevelPortsConstrainted();
         topvh->vhdlArchImplement();
@@ -35,7 +37,9 @@ main(int argc, char **argv) {
   try {
     IeeeStd_logic_1164=new Ieee_std_logic_1164("std_logic_1164");
     IeeeStd_logic_arith=new Ieee_std_logic_arith("std_logic_arith");
+    StdTextio=new Std_textio("TEXTIO");
     IeeeStd_logic_unsigned=new Ieee_std_logic_unsigned("STD_LOGIC_UNSIGNED");
+    IeeeStd_logic_textio=new Ieee_std_logic_textio("STD_LOGIC_TEXTIO");
     HSimConfigDecl *cfg;
  _top_i = new _top();
   cfg =  _top_i->topModuleInstantiate();

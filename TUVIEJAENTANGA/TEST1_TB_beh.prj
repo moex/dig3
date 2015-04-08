@@ -1,2 +1,2 @@
 vhdl work "IRQControl.vhd"
-vhdl work "Test1_TB.vhw"
+vhdl work "TEST1_TB.vhw"

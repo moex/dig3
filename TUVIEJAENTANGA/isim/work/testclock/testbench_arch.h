@@ -10,8 +10,8 @@
 //  \___\/\___\
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifndef H_Work_test1_tb_testbench_arch_H
-#define H_Work_test1_tb_testbench_arch_H
+#ifndef H_Work_testclock_testbench_arch_H
+#define H_Work_testclock_testbench_arch_H
 #ifdef __MINGW32__
 #include "xsimMinGW.h"
 #else
@@ -19,16 +19,16 @@
 #endif
 
 
-class Work_test1_tb_testbench_arch: public HSim__s6 {
+class Work_testclock_testbench_arch: public HSim__s6 {
 public:
 
 
-HSim__s4 C1g;
-HSim__s4 C1k;
-HSim__s4 C1p;
-    HSim__s1 SA[9];
-    Work_test1_tb_testbench_arch(const char * name);
-    ~Work_test1_tb_testbench_arch();
+HSim__s4 CC;
+HSim__s4 CG;
+HSim__s4 CJ;
+    HSim__s1 SA[6];
+    Work_testclock_testbench_arch(const char * name);
+    ~Work_testclock_testbench_arch();
     void constructObject();
     void constructPorts();
     void reset();
@@ -38,6 +38,6 @@ HSim__s4 C1p;
 
 
 
-HSim__s6 *createWork_test1_tb_testbench_arch(const char *name);
+HSim__s6 *createWork_testclock_testbench_arch(const char *name);
 
 #endif
