@@ -1,5 +1,7 @@
 EN reloj NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reloj.vhd sub00/vhpl00 1428516839
+EN reg_de_paginacion NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd sub00/vhpl08 1428520700
 EN irqcontrol NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd sub00/vhpl06 1428515885
+AR reg_de_paginacion fermin C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd sub00/vhpl09 1428520701
 EN trans_datos NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd sub00/vhpl04 1428517028
 AR trans_datos paco2 C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd sub00/vhpl05 1428517029
 AR latch_de_direcciones paco C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd sub00/vhpl03 1428516577
