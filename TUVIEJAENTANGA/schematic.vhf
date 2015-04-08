@@ -4,14 +4,14 @@
 --   ____  ____ 
 --  /   /\/   / 
 -- /___/  \  /    Vendor: Xilinx 
--- \   \   \/     Version : 9.2.04i
+-- \   \   \/     Version : 9.2i
 --  \   \         Application : sch2vhdl
 --  /   /         Filename : schematic.vhf
--- /___/   /\     Timestamp : 04/06/2015 21:32:11
+-- /___/   /\     Timestamp : 04/08/2015 10:24:56
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: C:\Xilinx92i\bin\nt\sch2vhdl.exe -intstyle ise -family spartan3e -flat -suppress -w C:/Dig3/dig3/TUVIEJAENTANGA/schematic.sch schematic.vhf
+--Command: "C:\Program Files (x86)\Xilinx\bin\nt\sch2vhdl.exe" -intstyle ise -family spartan3e -flat -suppress -w C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/schematic.sch schematic.vhf
 --Design Name: schematic
 --Device: spartan3e
 --Purpose:

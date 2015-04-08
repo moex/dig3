@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="Simulator" num="177" delta="unknown" >Unable to find any design unit with name <arg fmt="%s" index="1">Test1_TB</arg> in the library <arg fmt="%s" index="2">work</arg>.
+</msg>
+
 </messages>
 

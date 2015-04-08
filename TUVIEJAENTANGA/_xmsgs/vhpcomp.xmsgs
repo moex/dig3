@@ -5,16 +5,16 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLParsers" num="3313" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd</arg>&quot; Line <arg fmt="%d" index="2">91</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">F</arg>&apos;.  Should it be: <arg fmt="%s" index="4">FF</arg>?
+<msg type="warning" file="HDLParsers" num="3583" delta="unknown" >File &quot;<arg fmt="%s" index="1">C:/Program Files (x86)/Xilinx/vhdl/src/ieee/std_logic_arith.vhd</arg>&quot; which file &quot;<arg fmt="%s" index="2">C:/Program Files (x86)/Xilinx/vhdl/src/ieee/std_logic_unsigned.vhd</arg>&quot; depends on is modified, but has not been compiled.  You may need to compile &quot;<arg fmt="%s" index="3">C:/Program Files (x86)/Xilinx/vhdl/src/ieee/std_logic_arith.vhd</arg>&quot; first.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd</arg>&quot; Line <arg fmt="%d" index="2">93</arg>. <arg fmt="%s" index="3">F</arg>: Undefined symbol (last report in this block)
+<msg type="warning" file="HDLParsers" num="3583" delta="unknown" >File &quot;<arg fmt="%s" index="1">C:/Program Files (x86)/Xilinx/vhdl/src/ieee/std_logic_unsigned.vhd</arg>&quot; which file &quot;<arg fmt="%s" index="2">C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd</arg>&quot; depends on is modified, but has not been compiled.  You may need to compile &quot;<arg fmt="%s" index="3">C:/Program Files (x86)/Xilinx/vhdl/src/ieee/std_logic_unsigned.vhd</arg>&quot; first.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3313" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd</arg>&quot; Line <arg fmt="%d" index="2">126</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">F</arg>&apos;.  Should it be: <arg fmt="%s" index="4">FF</arg>?
+<msg type="warning" file="HDLParsers" num="3583" delta="unknown" >File &quot;<arg fmt="%s" index="1">C:/Program Files (x86)/Xilinx/vhdl/src/ieee/std_logic_arith.vhd</arg>&quot; which file &quot;<arg fmt="%s" index="2">C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd</arg>&quot; depends on is modified, but has not been compiled.  You may need to compile &quot;<arg fmt="%s" index="3">C:/Program Files (x86)/Xilinx/vhdl/src/ieee/std_logic_arith.vhd</arg>&quot; first.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd</arg>&quot; Line <arg fmt="%d" index="2">126</arg>. <arg fmt="%s" index="3">F</arg>: Undefined symbol (last report in this block)
+<msg type="info" file="Simulator" num="427" delta="unknown" >Not recompiling files in incremental mode, as all the files in <arg fmt="%s" index="1">Test1_TB_beh.prj</arg> are up to date.
 </msg>
 
 </messages>

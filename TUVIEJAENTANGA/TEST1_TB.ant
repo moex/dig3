@@ -5,15 +5,15 @@
 --   ____  ____ 
 --  /   /\/   / 
 -- /___/  \  /    Vendor: Xilinx 
--- \   \   \/     Version : 9.2.04i
+-- \   \   \/     Version : 9.2i
 --  \   \         Application : ISE
---  /   /         Filename : TEST1_TB.ant
--- /___/   /\     Timestamp : Mon Apr 06 22:42:38 2015
+--  /   /         Filename : Test1_TB.ant
+-- /___/   /\     Timestamp : Wed Apr 08 10:43:58 2015
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
 --Command: 
---Design Name: TEST1_TB
+--Design Name: Test1_TB
 --Device: Xilinx
 --
 
@@ -24,11 +24,11 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE IEEE.STD_LOGIC_TEXTIO.ALL;
 USE STD.TEXTIO.ALL;
 
-ENTITY TEST1_TB IS
-END TEST1_TB;
+ENTITY Test1_TB IS
+END Test1_TB;
 
-ARCHITECTURE testbench_arch OF TEST1_TB IS
-    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Dig3\dig3\TUVIEJAENTANGA\TEST1_TB.ano";
+ARCHITECTURE testbench_arch OF Test1_TB IS
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Users\Nacho\Documents\GitHub\dig3\TUVIEJAENTANGA\Test1_TB.ano";
 
     COMPONENT IRQControl
         PORT (
@@ -154,26 +154,29 @@ ARCHITECTURE testbench_arch OF TEST1_TB IS
                 -- -------------------------------------
                 -- -------------  Current Time:  1109ns
                 WAIT FOR 80 ns;
-                IRQ <= "00000001";
+                IRQ <= "00000011";
                 -- -------------------------------------
-                -- -------------  Current Time:  1269ns
-                WAIT FOR 160 ns;
+                -- -------------  Current Time:  1349ns
+                WAIT FOR 240 ns;
                 IRQA <= '0';
                 -- -------------------------------------
                 -- -------------  Current Time:  1509ns
-                WAIT FOR 240 ns;
-                IRQA <= '1';
+                WAIT FOR 160 ns;
                 IRQ <= "00000000";
                 -- -------------------------------------
                 -- -------------  Current Time:  1589ns
                 WAIT FOR 80 ns;
+                IRQA <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  1669ns
+                WAIT FOR 80 ns;
                 IRQA <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  1829ns
+                -- -------------  Current Time:  1909ns
                 WAIT FOR 240 ns;
                 IRQA <= '1';
                 -- -------------------------------------
-                WAIT FOR 8251 ns;
+                WAIT FOR 8171 ns;
 
                 STD.TEXTIO.write(TX_OUT, string'("Total[]"));
                 STD.TEXTIO.writeline(RESULTS, TX_OUT);

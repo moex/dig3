@@ -43,6 +43,7 @@ end IRQControl;
 
 architecture Behavioral of IRQControl is
  signal S: std_logic_vector(7 downto 0);
+ signal J: std_logic_vector(7 downto 0);
  signal IRQE: std_logic_vector(7 downto 0);
  signal IRQT: std_logic_vector(7 downto 0);
  signal CS: std_logic;
@@ -84,25 +85,26 @@ begin
 		end if;
 	end process;
 	
+	--manejo de prioridades
 	process(S)
 	begin
 		if(end1='1') then		
 			if S(0)='1' then
-				F<="0000001";
+				J<="00000001";
 			elsif( S(1)='1')then
-				F<="0000001";
+				J<="00000010";
 			elsif( S(2)='1')then
-				F<="0000010";
+				J<="00000100";
 			elsif( S(3)='1')then
-				F<="0000100";
+				J<="00001000";
 			elsif( S(4)='1')then
-				F<="0001000";
+				J<="00010000";
 			elsif( S(5)='1')then
-				F<="0010000";
+				J<="00100000";
 			elsif( S(6)='1')then
-				F<="0100000";
+				J<="01000000";
 			elsif( S(7)='1')then
-				F<="1000000";
+				J<="10000000";
 			end if;
 		end if;
 	end process;
@@ -123,7 +125,7 @@ begin
 	
 	--bus de datos tres estados
 	
-	Data <= F+IRQT when (IRQA='0') else
+	Data <= J+IRQT when (IRQA='0') else
 				IRQE when (RD='0' and CS='0' and Dir(0)='0')else
 				IRQT when (RD='0' and CS='0' and Dir(0)='1')else
 				(Others=>'Z');

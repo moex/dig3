@@ -1,18 +1,13 @@
-V3 13
-FL C:/Dig3/dig3/Trans_Datos.vhd 2015/03/25.21:50:50 J.40
-FL C:/Dig3/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd 2015/03/25.21:50:50 J.40
+V3 14
+FL C:/Dig3/dig3/Trans_Datos.vhd 2015/03/25.21:50:50 J.36
+FL C:/Dig3/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd 2015/03/25.21:50:50 J.36
 EN work/Trans_Datos 1427935935 FL C:/Dig3/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd \
       PB ieee/std_logic_1164 1192821031 PB ieee/std_logic_arith 1192821032 \
       PB ieee/STD_LOGIC_UNSIGNED 1192821033
 AR work/Trans_Datos/PACO2 1427935936 \
       FL C:/Dig3/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd EN work/Trans_Datos 1427935935
-FL C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd 2015/04/06.21:15:47 J.40
-EN work/IRQControl 1428366733 FL C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd \
-      PB ieee/std_logic_1164 1192821031 PB ieee/std_logic_arith 1192821032 \
-      PB ieee/STD_LOGIC_UNSIGNED 1192821033
-AR work/IRQControl/Behavioral 1428366734 \
-      FL C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd EN work/IRQControl 1428366733
-FL C:/Dig3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd 2015/03/25.21:34:17 J.40
+FL C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd 2015/04/06.21:15:47 J.36
+FL C:/Dig3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd 2015/03/25.21:34:17 J.36
 EN work/Latch_De_Direcciones 1428366866 \
       FL C:/Dig3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd \
       PB ieee/std_logic_1164 1192821031 PB ieee/std_logic_arith 1192821032 \
@@ -20,9 +15,16 @@ EN work/Latch_De_Direcciones 1428366866 \
 AR work/Latch_De_Direcciones/PACO 1428366867 \
       FL C:/Dig3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd \
       EN work/Latch_De_Direcciones 1428366866
-FL C:/Dig3/dig3/TUVIEJAENTANGA/Reloj.vhd 2015/04/01.20:50:05 J.40
+FL C:/Dig3/dig3/TUVIEJAENTANGA/Reloj.vhd 2015/04/01.20:50:05 J.36
 EN work/Reloj 1427932218 FL C:/Dig3/dig3/TUVIEJAENTANGA/Reloj.vhd \
       PB ieee/std_logic_1164 1192821031 PB ieee/std_logic_arith 1192821032 \
       PB ieee/STD_LOGIC_UNSIGNED 1192821033
 AR work/Reloj/NADADEZURDOS 1427932219 \
       FL C:/Dig3/dig3/TUVIEJAENTANGA/Reloj.vhd EN work/Reloj 1427932218
+EN work/IRQControl 1428366733 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd \
+      PB ieee/std_logic_1164 1192821031 PB ieee/std_logic_arith 1192821032 \
+      PB ieee/STD_LOGIC_UNSIGNED 1192821033
+AR work/IRQControl/Behavioral 1428366734 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd \
+      EN work/IRQControl 1428366733

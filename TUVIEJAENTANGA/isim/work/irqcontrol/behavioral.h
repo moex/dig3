@@ -24,7 +24,7 @@ public:
 
     HSim__s1 SE[9];
 
-    HSim__s1 SA[7];
+    HSim__s1 SA[8];
   char t0;
   char *t1;
   char t2;
