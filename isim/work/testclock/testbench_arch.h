@@ -23,12 +23,9 @@ class Work_testclock_testbench_arch: public HSim__s6 {
 public:
 
 
-HSimFileVar Results;
-HSim__s4 VG;
-HSimAccessVar VJ;
-HSim__s4 CN;
-HSim__s4 CS;
-HSim__s4 CV;
+HSim__s4 CC;
+HSim__s4 CG;
+HSim__s4 CJ;
     HSim__s1 SA[6];
     Work_testclock_testbench_arch(const char * name);
     ~Work_testclock_testbench_arch();

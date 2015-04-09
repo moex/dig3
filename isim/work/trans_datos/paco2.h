@@ -24,8 +24,8 @@ public:
 
     HSim__s1 SE[4];
 
-  char t6;
-  char *t7;
+  char t0;
+  char *t1;
     Work_trans_datos_paco2(const char * name);
     ~Work_trans_datos_paco2();
     void constructObject();

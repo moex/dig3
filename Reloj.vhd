@@ -37,30 +37,29 @@ entity Reloj is
 end Reloj;
 
 architecture NADADEZURDOS of Reloj is
-	signal Count : std_logic_vector (1 downto 0);
+	signal Count : std_logic_vector (2 downto 0) := "001";
 	signal resetclk, resetf, readyf, TCR, RRC : std_logic;
-	signal Resetcount : std_logic_vector (1 downto 0);
+	signal Resetcount : std_logic_vector (4 downto 0):= "00001";
 begin
 
-	process (Clk, resetclk) -- Contador con reset asincronico...
+	process (clk) -- Contador con reset asincronico...
 		begin
-		if resetclk = '1' then Count <= "00"; 
-		elsif clk'event and clk = '1' then
-			count <= count + 1;
+		if clk'event and clk = '1' then 
+				Count <= Count(1 downto 0)& Count(2);		
 		end if;
 	end process;
 	
 	process (Clk, RRC) -- Cuenta de cuatro times para el reseteo del micro...
 		begin
-		if RRC = '1' then Resetcount <= "00"; 
+		if RRC = '1' then Resetcount <= "00001"; 
 		elsif clk'event and clk = '1' then
-			if resetf = '1' then
-				Resetcount <= Resetcount + 1;
+			if resetf = '1' and Count = "100" then
+				Resetcount <= Resetcount(3 downto 0) & Resetcount(4);
 			end if;	
 		end if;
 	end process;
 	
-	TCR <= '1' when Resetcount = "11" else '0';
+	TCR <= '1' when Resetcount = "10000" else '0';
 	
 	process (Clk) -- Logica de control de READY y RESET...
 		begin
@@ -79,8 +78,8 @@ begin
 		end if;
 	end process;
 	
-	Mclk <= '1' when Count = "10" else '0';
-	resetclk <= '1' when Count = "10" else '0';
+	Mclk <= '1' when Count = "100" else '0';
+--	resetclk <= '1' when Count = "100" else '0';
 	ResetOUT <= '1' when resetf = '1' else '0';
 	Ready <= '1' when readyf = '1' else '0';		
 			

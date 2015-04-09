@@ -1,0 +1,101 @@
+--------------------------------------------------------------------------------
+-- Copyright (c) 1995-2007 Xilinx, Inc.
+-- All Right Reserved.
+--------------------------------------------------------------------------------
+--   ____  ____ 
+--  /   /\/   / 
+-- /___/  \  /    Vendor: Xilinx 
+-- \   \   \/     Version : 9.2.04i
+--  \   \         Application : ISE
+--  /   /         Filename : TestTrans.ant
+-- /___/   /\     Timestamp : Wed Apr 08 19:58:32 2015
+-- \   \  /  \ 
+--  \___\/\___\ 
+--
+--Command: 
+--Design Name: TestTrans
+--Device: Xilinx
+--
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY TestTrans IS
+END TestTrans;
+
+ARCHITECTURE testbench_arch OF TestTrans IS
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\TUVIEJAENTANGA\TestTrans.ano";
+
+    COMPONENT Trans_Datos
+        PORT (
+            Datin : InOut std_logic_vector (15 DownTo 0);
+            Datout : InOut std_logic_vector (15 DownTo 0);
+            Dtr : In std_logic;
+            Den : In std_logic
+        );
+    END COMPONENT;
+
+    SIGNAL Datin : std_logic_vector (15 DownTo 0) := "ZZZZZZZZZZZZZZZZ";
+    SIGNAL Datout : std_logic_vector (15 DownTo 0) := "ZZZZZZZZZZZZZZZZ";
+    SIGNAL Dtr : std_logic := '0';
+    SIGNAL Den : std_logic := '0';
+
+    SHARED VARIABLE TX_ERROR : INTEGER := 0;
+    SHARED VARIABLE TX_OUT : LINE;
+
+    BEGIN
+        UUT : Trans_Datos
+        PORT MAP (
+            Datin => Datin,
+            Datout => Datout,
+            Dtr => Dtr,
+            Den => Den
+        );
+
+        PROCESS
+            BEGIN
+                -- -------------  Current Time:  200ns
+                WAIT FOR 200 ns;
+                Dtr <= '1';
+                Den <= '1';
+                Datin <= "1000010001000100";
+                -- -------------------------------------
+                -- -------------  Current Time:  300ns
+                WAIT FOR 100 ns;
+                Dtr <= '0';
+                Den <= '0';
+                Datin <= "ZZZZZZZZZZZZZZZZ";
+                -- -------------------------------------
+                -- -------------  Current Time:  600ns
+                WAIT FOR 300 ns;
+                Datout <= "0110100010010001";
+                -- -------------------------------------
+                -- -------------  Current Time:  700ns
+                WAIT FOR 100 ns;
+                Datout <= "ZZZZZZZZZZZZZZZZ";
+                -- -------------------------------------
+                -- -------------  Current Time:  800ns
+                WAIT FOR 100 ns;
+                Dtr <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  900ns
+                WAIT FOR 100 ns;
+                Dtr <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  1000ns
+                WAIT FOR 100 ns;
+                Datout <= "ZZZZZZZZZZZZZZZ1";
+
+                STD.TEXTIO.write(TX_OUT, string'("Total[]"));
+                STD.TEXTIO.writeline(RESULTS, TX_OUT);
+                ASSERT (FALSE) REPORT
+                    "Success! Simulation for annotation completed"
+                    SEVERITY FAILURE;
+            END PROCESS;
+
+    END testbench_arch;
+

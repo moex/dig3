@@ -7,13 +7,13 @@
 -- /___/  \  /    Vendor: Xilinx 
 -- \   \   \/     Version : 9.2.04i
 --  \   \         Application : ISE
---  /   /         Filename : TestClock_selfcheck.vhw
--- /___/   /\     Timestamp : Wed Apr 01 20:03:44 2015
+--  /   /         Filename : Testclock_selfcheck.vhw
+-- /___/   /\     Timestamp : Wed Apr 01 20:26:51 2015
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
 --Command: 
---Design Name: TestClock_selfcheck_beh
+--Design Name: Testclock_selfcheck_beh
 --Device: Xilinx
 --
 
@@ -24,10 +24,10 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE IEEE.STD_LOGIC_TEXTIO.ALL;
 USE STD.TEXTIO.ALL;
 
-ENTITY TestClock_selfcheck_beh IS
-END TestClock_selfcheck_beh;
+ENTITY Testclock_selfcheck_beh IS
+END Testclock_selfcheck_beh;
 
-ARCHITECTURE testbench_arch OF TestClock_selfcheck_beh IS
+ARCHITECTURE testbench_arch OF Testclock_selfcheck_beh IS
     COMPONENT Reloj
         PORT (
             Clk : In std_logic;
@@ -51,7 +51,7 @@ ARCHITECTURE testbench_arch OF TestClock_selfcheck_beh IS
 
     constant PERIOD : time := 40 ns;
     constant DUTY_CYCLE : real := 0.5;
-    constant OFFSET : time := 3 ns;
+    constant OFFSET : time := 1 ns;
 
     BEGIN
         UUT : Reloj
@@ -140,27 +140,39 @@ ARCHITECTURE testbench_arch OF TestClock_selfcheck_beh IS
                 END IF;
             END;
             BEGIN
-                -- -------------  Current Time:  60ns
-                WAIT FOR 60 ns;
+                -- -------------  Current Time:  56ns
+                WAIT FOR 56 ns;
                 IOReady <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  66ns
-                WAIT FOR 6 ns;
+                WAIT FOR 10 ns;
                 CHECK_Ready('1', 66);
                 -- -------------------------------------
-                -- -------------  Current Time:  500ns
-                WAIT FOR 434 ns;
+                -- -------------  Current Time:  136ns
+                WAIT FOR 70 ns;
+                IOReady <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  146ns
+                WAIT FOR 10 ns;
+                CHECK_Ready('0', 146);
+                -- -------------------------------------
+                -- -------------  Current Time:  976ns
+                WAIT FOR 830 ns;
+                IOReady <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  986ns
+                WAIT FOR 10 ns;
+                CHECK_Ready('1', 986);
+                -- -------------------------------------
+                -- -------------  Current Time:  1056ns
+                WAIT FOR 70 ns;
                 ResetIN <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  506ns
-                WAIT FOR 6 ns;
-                CHECK_ResetOUT('1', 506);
+                -- -------------  Current Time:  1066ns
+                WAIT FOR 10 ns;
+                CHECK_ResetOUT('1', 1066);
                 -- -------------------------------------
-                -- -------------  Current Time:  540ns
-                WAIT FOR 34 ns;
-                ResetIN <= '0';
-                -- -------------------------------------
-                WAIT FOR 99500 ns;
+                WAIT FOR 8974 ns;
 
                 IF (TX_ERROR = 0) THEN
                     STD.TEXTIO.write(TX_OUT, string'("No errors or warnings"));

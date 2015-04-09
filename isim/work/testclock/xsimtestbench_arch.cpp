@@ -20,7 +20,7 @@ public:
 
         HSim__s6 * topvh = 0;
         extern HSim__s6 * createWork_testclock_testbench_arch(const char*);
-        topvh = createWork_testclock_testbench_arch("TestClock");
+        topvh = createWork_testclock_testbench_arch("Testclock");
         topvh->constructPorts();
         topvh->checkTopLevelPortsConstrainted();
         topvh->vhdlArchImplement();

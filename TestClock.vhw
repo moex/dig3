@@ -7,13 +7,13 @@
 -- /___/  \  /    Vendor: Xilinx 
 -- \   \   \/     Version : 9.2.04i
 --  \   \         Application : ISE
---  /   /         Filename : TestClock.vhw
--- /___/   /\     Timestamp : Wed Apr 01 20:12:51 2015
+--  /   /         Filename : Testclock.vhw
+-- /___/   /\     Timestamp : Wed Apr 08 21:21:34 2015
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
 --Command: 
---Design Name: TestClock
+--Design Name: Testclock
 --Device: Xilinx
 --
 
@@ -24,10 +24,10 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE IEEE.STD_LOGIC_TEXTIO.ALL;
 USE STD.TEXTIO.ALL;
 
-ENTITY TestClock IS
-END TestClock;
+ENTITY Testclock IS
+END Testclock;
 
-ARCHITECTURE testbench_arch OF TestClock IS
+ARCHITECTURE testbench_arch OF Testclock IS
     COMPONENT Reloj
         PORT (
             Clk : In std_logic;
@@ -46,9 +46,9 @@ ARCHITECTURE testbench_arch OF TestClock IS
     SIGNAL ResetIN : std_logic := '0';
     SIGNAL ResetOUT : std_logic := '0';
 
-    constant PERIOD : time := 200 ns;
+    constant PERIOD : time := 40 ns;
     constant DUTY_CYCLE : real := 0.5;
-    constant OFFSET : time := 0 ns;
+    constant OFFSET : time := 1 ns;
 
     BEGIN
         UUT : Reloj
@@ -74,27 +74,19 @@ ARCHITECTURE testbench_arch OF TestClock IS
 
         PROCESS
             BEGIN
-                -- -------------  Current Time:  685ns
-                WAIT FOR 685 ns;
-                IOReady <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  1685ns
-                WAIT FOR 1000 ns;
-                IOReady <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  2685ns
-                WAIT FOR 1000 ns;
-                IOReady <= '1';
-                -- -------------------------------------
-                -- -------------  Current Time:  4685ns
-                WAIT FOR 2000 ns;
+                -- -------------  Current Time:  56ns
+                WAIT FOR 56 ns;
                 ResetIN <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  4885ns
-                WAIT FOR 200 ns;
+                -- -------------  Current Time:  96ns
+                WAIT FOR 40 ns;
                 ResetIN <= '0';
                 -- -------------------------------------
-                WAIT FOR 5315 ns;
+                -- -------------  Current Time:  976ns
+                WAIT FOR 880 ns;
+                IOReady <= '1';
+                -- -------------------------------------
+                WAIT FOR 9064 ns;
 
             END PROCESS;
 
