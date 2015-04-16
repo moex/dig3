@@ -1,38 +1,41 @@
-V3 25
-FL C:/Dig3/dig3/Latch_De_Direcciones.vhd 2015/03/25.21:34:17 J.40
-EN work/Latch_De_Direcciones 1427928700 FL C:/Dig3/dig3/Latch_De_Direcciones.vhd \
+V3 21
+FL C:/TUVIEJAENTANGA/../Dig3/dig3/Trans_Datos.vhd 2015/03/25.21:50:50 J.40
+EN work/Trans_Datos 1428531800 FL C:/TUVIEJAENTANGA/../Dig3/dig3/Trans_Datos.vhd \
       PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
       PB ieee/STD_LOGIC_UNSIGNED 1194562362
-AR work/Latch_De_Direcciones/PACO 1427928701 \
-      FL C:/Dig3/dig3/Latch_De_Direcciones.vhd EN work/Latch_De_Direcciones 1427928700
-FL C:/Dig3/dig3/Reg_de_Paginacion.vhd 2015/03/30.21:53:44 J.40
-EN work/Reg_de_Paginacion 1427928704 FL C:/Dig3/dig3/Reg_de_Paginacion.vhd \
+AR work/Trans_Datos/PACO2 1428531801 \
+      FL C:/TUVIEJAENTANGA/../Dig3/dig3/Trans_Datos.vhd EN work/Trans_Datos 1428531800
+FL C:/TUVIEJAENTANGA/Reg_de_Paginacion.vhd 2015/04/01.21:41:44 J.40
+EN work/Reg_de_Paginacion 1428532754 FL C:/TUVIEJAENTANGA/Reg_de_Paginacion.vhd \
       PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
       PB ieee/STD_LOGIC_UNSIGNED 1194562362
-AR work/Reg_de_Paginacion/Fermin 1427928705 \
-      FL C:/Dig3/dig3/Reg_de_Paginacion.vhd EN work/Reg_de_Paginacion 1427928704
-FL C:/Dig3/dig3/Reloj.vhd 2015/04/01.19:51:16 J.40
-EN work/Reloj 1427928706 FL C:/Dig3/dig3/Reloj.vhd PB ieee/std_logic_1164 1194562354 \
+AR work/Reg_de_Paginacion/Fermin 1428532755 \
+      FL C:/TUVIEJAENTANGA/Reg_de_Paginacion.vhd EN work/Reg_de_Paginacion 1428532754
+FL C:/TUVIEJAENTANGA/Reloj.vhd 2015/04/01.21:36:28 J.40
+EN work/Reloj 1428538898 FL C:/TUVIEJAENTANGA/Reloj.vhd PB ieee/std_logic_1164 1194562354 \
       PB ieee/std_logic_arith 1194562356 PB ieee/STD_LOGIC_UNSIGNED 1194562362
-AR work/Reloj/NADADEZURDOS 1427928707 \
-      FL C:/Dig3/dig3/Reloj.vhd EN work/Reloj 1427928706
-FL C:/Dig3/dig3/schematic.vhf 2015/04/01.19:51:38 J.40
-EN work/schematic 1427928708 FL C:/Dig3/dig3/schematic.vhf PB ieee/std_logic_1164 1194562354 \
-      PB ieee/NUMERIC_STD 1194562368 LB UNISIM PH unisim/VCOMPONENTS 1194562990
-AR work/schematic/BEHAVIORAL 1427928709 \
-      FL C:/Dig3/dig3/schematic.vhf EN work/schematic 1427928708 \
-      CP Latch_De_Direcciones CP Trans_Datos CP Reg_de_Paginacion CP OR2 CP Reloj \
-      CP LD
-FL C:/Dig3/dig3/TestClock.ant 2015/04/01.20:12:51 J.40
-EN work/TestClock 1427929974 FL C:/Dig3/dig3/TestClock.ant PB ieee/std_logic_1164 1194562354 \
-      PB ieee/std_logic_arith 1194562356 PB ieee/STD_LOGIC_UNSIGNED 1194562362 \
-      PB ieee/STD_LOGIC_TEXTIO 1194562364 PB std/textio 1194562348
-AR work/TestClock/testbench_arch 1427929975 \
-      FL C:/Dig3/dig3/TestClock.ant EN work/TestClock 1427929974 CP Reloj \
-      PB ieee/STD_LOGIC_TEXTIO 1194562364
-FL C:/Dig3/dig3/Trans_Datos.vhd 2015/03/25.21:50:50 J.40
-EN work/Trans_Datos 1427928702 FL C:/Dig3/dig3/Trans_Datos.vhd \
+AR work/Reloj/NADADEZURDOS 1428538899 \
+      FL C:/TUVIEJAENTANGA/Reloj.vhd EN work/Reloj 1428538898
+FL C:/TUVIEJAENTANGA/Testclock.vhw 2015/04/08.21:21:34 J.40
+EN work/Testclock 1428538900 FL C:/TUVIEJAENTANGA/Testclock.vhw \
       PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
-      PB ieee/STD_LOGIC_UNSIGNED 1194562362
-AR work/Trans_Datos/PACO2 1427928703 \
-      FL C:/Dig3/dig3/Trans_Datos.vhd EN work/Trans_Datos 1427928702
+      PB ieee/STD_LOGIC_UNSIGNED 1194562362 PB ieee/STD_LOGIC_TEXTIO 1194562364 \
+      PB std/textio 1194562348
+AR work/Testclock/testbench_arch 1428538901 \
+      FL C:/TUVIEJAENTANGA/Testclock.vhw EN work/Testclock 1428538900 CP Reloj
+FL C:/TUVIEJAENTANGA/TestPaginacion.vhw 2015/04/08.19:40:17 J.40
+EN work/TestPaginacion 1428532825 FL C:/TUVIEJAENTANGA/TestPaginacion.vhw \
+      PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
+      PB ieee/STD_LOGIC_UNSIGNED 1194562362 PB ieee/STD_LOGIC_TEXTIO 1194562364 \
+      PB std/textio 1194562348
+AR work/TestPaginacion/testbench_arch 1428532826 \
+      FL C:/TUVIEJAENTANGA/TestPaginacion.vhw EN work/TestPaginacion 1428532825 \
+      CP Reg_de_Paginacion
+FL C:/TUVIEJAENTANGA/TestTrans.vhw 2015/04/08.19:58:32 J.40
+EN work/TestTrans 1428533918 FL C:/TUVIEJAENTANGA/TestTrans.vhw \
+      PB ieee/std_logic_1164 1194562354 PB ieee/std_logic_arith 1194562356 \
+      PB ieee/STD_LOGIC_UNSIGNED 1194562362 PB ieee/STD_LOGIC_TEXTIO 1194562364 \
+      PB std/textio 1194562348
+AR work/TestTrans/testbench_arch 1428533919 \
+      FL C:/TUVIEJAENTANGA/TestTrans.vhw EN work/TestTrans 1428533918 \
+      CP Trans_Datos

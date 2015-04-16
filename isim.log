@@ -1,46 +1,41 @@
  command line:
-   ./Reloj_isim_beh.exe
+   ./Testclock_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  52253
+     -ipcport  49180
 
-Wed Apr 01 20:13:10 2015
+Wed Apr 08 21:21:40 2015
 
-Total Line Count : 42
+Total Line Count : 75
 
  Elaboration time : 0.0156 sec.
 
- Estimate current memory usage : 149.541 Meg. 
+ Estimate current memory usage : 149.606 Meg. 
 
- Total Signals          : 13
- Total Nets             : 15
- Total Signal Drivers   : 10
- Total Blocks           : 4
+ Total Signals          : 19
+ Total Nets             : 19
+ Total Signal Drivers   : 12
+ Total Blocks           : 7
  Total Primitive Blocks : 1
- Total Processes        : 8
+ Total Processes        : 9
  Total Traceable Variables  : 0
- Total Scalar Nets and Variables : 15
-ntrace select -o on -n /Reloj/clk 
-ntrace select -o on -n /Reloj/mclk 
-ntrace select -o on -n /Reloj/ready 
-ntrace select -o on -n /Reloj/ioready 
-ntrace select -o on -n /Reloj/resetin 
-ntrace select -o on -n /Reloj/resetout 
-ntrace select -o on -n /Reloj/count 
-ntrace select -o on -n /Reloj/resetclk 
-ntrace select -o on -n /Reloj/resetf 
-ntrace select -o on -n /Reloj/readyf 
-ntrace select -o on -n /Reloj/tcr 
-ntrace select -o on -n /Reloj/rrc 
-ntrace select -o on -n /Reloj/resetcount 
+ Total Scalar Nets and Variables : 19
+ntrace select -o on -n /Testclock/clk 
+ntrace select -o on -n /Testclock/mclk 
+ntrace select -o on -n /Testclock/ready 
+ntrace select -o on -n /Testclock/ioready 
+ntrace select -o on -n /Testclock/resetin 
+ntrace select -o on -n /Testclock/resetout 
+ntrace select -o on -n /Testclock/UUT/count 
+ntrace select -o on -n /Testclock/UUT/resetcount 
 ntrace start 
 isimrun 1000 ns 
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 
- Simulation time 0.1248 sec.
+ Simulation time 0.0624 sec.
 
- Estimate current memory usage : 158.716 Meg. 
+ Estimate current memory usage : 158.781 Meg. 
 
-Wed Apr 01 20:15:02 2015
+Thu Apr 09 07:53:47 2015
 

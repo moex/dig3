@@ -45,7 +45,7 @@ begin
 	ent <= Entrada(15 downto 8) when Direccion (0) = '1' else Entrada (7 downto 0);
 	Dir <= Direccion(19) & Direccion(18) & Direccion(17) & Direccion(16);
 	reg <= ent when (((Dir="0000") or (Dir="0011")or (Dir="0001") or (Dir="0010")) and (IO='0') and (WR='0'));
-	S <= "001" when reg = "00001000" else "010" when reg = "00010000" else "100" when reg = "00100000" else "000";
+	S <= "001" when reg(5)&reg(4)&reg(3) = "001" else "010" when reg(5)&reg(4)&reg(3) = "010" else "100" when reg(5)&reg(4)&reg(3) = "100" else "000";
 
 
 end Fermin;

@@ -4,7 +4,6 @@ Clk
 IRQA
 RD
 RW
-RS
 =IRQ[7:0]=
 =Dir[19:0]=
 [Outputs]

@@ -1,0 +1,7 @@
+[Inputs]
+Dtr
+Den
+[Outputs]
+[BiDir]
+=Datin[15:0]=
+=Datout[15:0]=

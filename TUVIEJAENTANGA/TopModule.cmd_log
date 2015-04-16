@@ -1,0 +1,2 @@
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/TopModule.sch" TopModule.vhf
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/TopModule.sch" TopModule.vhf

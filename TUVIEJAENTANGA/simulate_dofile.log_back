@@ -1,4 +1,4 @@
 run 1000 ns
-run 10000 ns
-step
+run 1000 ns
+run 1000 ns
 exit

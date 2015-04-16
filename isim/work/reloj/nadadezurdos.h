@@ -25,8 +25,8 @@ public:
     HSim__s1 SE[6];
 
     HSim__s1 SA[7];
-  char t84;
-HSimConstraints *c85;
+  char t0;
+HSimConstraints *c1;
     Work_reloj_nadadezurdos(const char * name);
     ~Work_reloj_nadadezurdos();
     void constructObject();

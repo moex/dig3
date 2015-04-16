@@ -1,0 +1,3 @@
+MODULE TestLatch
+SUBMODULE Latch_De_Direcciones
+INSTANCE UUT

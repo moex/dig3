@@ -7,13 +7,13 @@
 -- /___/  \  /    Vendor: Xilinx 
 -- \   \   \/     Version : 9.2.04i
 --  \   \         Application : ISE
---  /   /         Filename : TestClock_selfcheck.vhw
--- /___/   /\     Timestamp : Wed Apr 01 20:13:00 2015
+--  /   /         Filename : Testclock_selfcheck.vhw
+-- /___/   /\     Timestamp : Wed Apr 01 20:26:51 2015
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
 --Command: 
---Design Name: TestClock_selfcheck
+--Design Name: Testclock_selfcheck
 --Device: Xilinx
 --
 
@@ -24,10 +24,10 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 USE IEEE.STD_LOGIC_TEXTIO.ALL;
 USE STD.TEXTIO.ALL;
 
-ENTITY TestClock_selfcheck IS
-END TestClock_selfcheck;
+ENTITY Testclock_selfcheck IS
+END Testclock_selfcheck;
 
-ARCHITECTURE testbench_arch OF TestClock_selfcheck IS
+ARCHITECTURE testbench_arch OF Testclock_selfcheck IS
     COMPONENT Reloj
         PORT (
             Clk : In std_logic;
@@ -49,9 +49,9 @@ ARCHITECTURE testbench_arch OF TestClock_selfcheck IS
     SHARED VARIABLE TX_ERROR : INTEGER := 0;
     SHARED VARIABLE TX_OUT : LINE;
 
-    constant PERIOD : time := 200 ns;
+    constant PERIOD : time := 40 ns;
     constant DUTY_CYCLE : real := 0.5;
-    constant OFFSET : time := 0 ns;
+    constant OFFSET : time := 1 ns;
 
     BEGIN
         UUT : Reloj
@@ -140,43 +140,39 @@ ARCHITECTURE testbench_arch OF TestClock_selfcheck IS
                 END IF;
             END;
             BEGIN
-                -- -------------  Current Time:  685ns
-                WAIT FOR 685 ns;
+                -- -------------  Current Time:  56ns
+                WAIT FOR 56 ns;
                 IOReady <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  715ns
-                WAIT FOR 30 ns;
-                CHECK_Ready('1', 715);
+                -- -------------  Current Time:  66ns
+                WAIT FOR 10 ns;
+                CHECK_Ready('1', 66);
                 -- -------------------------------------
-                -- -------------  Current Time:  1685ns
-                WAIT FOR 970 ns;
+                -- -------------  Current Time:  136ns
+                WAIT FOR 70 ns;
                 IOReady <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  1715ns
-                WAIT FOR 30 ns;
-                CHECK_Ready('0', 1715);
+                -- -------------  Current Time:  146ns
+                WAIT FOR 10 ns;
+                CHECK_Ready('0', 146);
                 -- -------------------------------------
-                -- -------------  Current Time:  2685ns
-                WAIT FOR 970 ns;
+                -- -------------  Current Time:  976ns
+                WAIT FOR 830 ns;
                 IOReady <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  2715ns
-                WAIT FOR 30 ns;
-                CHECK_Ready('1', 2715);
+                -- -------------  Current Time:  986ns
+                WAIT FOR 10 ns;
+                CHECK_Ready('1', 986);
                 -- -------------------------------------
-                -- -------------  Current Time:  4685ns
-                WAIT FOR 1970 ns;
+                -- -------------  Current Time:  1056ns
+                WAIT FOR 70 ns;
                 ResetIN <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  4715ns
-                WAIT FOR 30 ns;
-                CHECK_ResetOUT('1', 4715);
+                -- -------------  Current Time:  1066ns
+                WAIT FOR 10 ns;
+                CHECK_ResetOUT('1', 1066);
                 -- -------------------------------------
-                -- -------------  Current Time:  4885ns
-                WAIT FOR 170 ns;
-                ResetIN <= '0';
-                -- -------------------------------------
-                WAIT FOR 5315 ns;
+                WAIT FOR 8974 ns;
 
                 IF (TX_ERROR = 0) THEN
                     STD.TEXTIO.write(TX_OUT, string'("No errors or warnings"));

@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 9.2.04i
 --  \   \         Application : sch2vhdl
 --  /   /         Filename : schematic.vhf
--- /___/   /\     Timestamp : 04/01/2015 19:51:38
+-- /___/   /\     Timestamp : 04/08/2015 21:21:33
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: C:\Xilinx92i\bin\nt\sch2vhdl.exe -intstyle ise -family spartan3e -flat -suppress -w C:/Dig3/dig3/schematic.sch schematic.vhf
+--Command: C:\Xilinx92i\bin\nt\sch2vhdl.exe -intstyle ise -family spartan3e -flat -suppress -w C:/TUVIEJAENTANGA/schematic.sch schematic.vhf
 --Design Name: schematic
 --Device: spartan3e
 --Purpose:
@@ -33,7 +33,10 @@ entity schematic is
           CLK        : in    std_logic; 
           DEN        : in    std_logic; 
           DTR        : in    std_logic; 
+          INTA       : in    std_logic; 
+          IRQ        : in    std_logic_vector (7 downto 0); 
           MIO        : in    std_logic; 
+          RD         : in    std_logic; 
           ReadyIN    : in    std_logic; 
           Reset      : in    std_logic; 
           WR         : in    std_logic; 
@@ -41,6 +44,7 @@ entity schematic is
           CHIPs      : out   std_logic_vector (2 downto 0); 
           ClkMicro   : out   std_logic; 
           HighW      : out   std_logic; 
+          INTR       : out   std_logic; 
           LowW       : out   std_logic; 
           ReadyMicro : out   std_logic; 
           ResetMicro : out   std_logic; 
@@ -50,9 +54,11 @@ end schematic;
 architecture BEHAVIORAL of schematic is
    attribute BOX_TYPE   : string ;
    attribute INIT       : string ;
-   signal BHEL         : std_logic;
-   signal ADComp_DUMMY : std_logic_vector (19 downto 0);
-   signal ADl_DUMMY    : std_logic_vector (15 downto 0);
+   signal BHEL             : std_logic;
+   signal ClkMicro_DUMMY   : std_logic;
+   signal ResetMicro_DUMMY : std_logic;
+   signal ADComp_DUMMY     : std_logic_vector (19 downto 0);
+   signal ADl_DUMMY        : std_logic_vector (15 downto 0);
    component Latch_De_Direcciones
       port ( ALE  : in    std_logic; 
              Dirh : in    std_logic_vector (3 downto 0); 
@@ -102,8 +108,23 @@ architecture BEHAVIORAL of schematic is
    attribute INIT of LD : component is "0";
    attribute BOX_TYPE of LD : component is "BLACK_BOX";
    
+   component IRQControl
+      port ( Reset : in    std_logic; 
+             Clk   : in    std_logic; 
+             IRQA  : in    std_logic; 
+             RD    : in    std_logic; 
+             RW    : in    std_logic; 
+             ChS   : in    std_logic; 
+             IRQ   : in    std_logic_vector (7 downto 0); 
+             Dir   : in    std_logic_vector (19 downto 0); 
+             Data  : inout std_logic_vector (7 downto 0); 
+             IRQR  : out   std_logic);
+   end component;
+   
 begin
    ADComp(19 downto 0) <= ADComp_DUMMY(19 downto 0);
+   ClkMicro <= ClkMicro_DUMMY;
+   ResetMicro <= ResetMicro_DUMMY;
    ADl_DUMMY(15 downto 0) <= ADl(15 downto 0);
    XLXI_1 : Latch_De_Direcciones
       port map (ALE=>Ale,
@@ -138,14 +159,26 @@ begin
       port map (Clk=>CLK,
                 IOReady=>ReadyIN,
                 ResetIN=>Reset,
-                Mclk=>ClkMicro,
+                Mclk=>ClkMicro_DUMMY,
                 Ready=>ReadyMicro,
-                ResetOUT=>ResetMicro);
+                ResetOUT=>ResetMicro_DUMMY);
    
    XLXI_13 : LD
       port map (D=>BHE,
                 G=>Ale,
                 Q=>BHEL);
+   
+   XLXI_14 : IRQControl
+      port map (ChS=>MIO,
+                Clk=>ClkMicro_DUMMY,
+                Dir(19 downto 0)=>ADComp_DUMMY(19 downto 0),
+                IRQ(7 downto 0)=>IRQ(7 downto 0),
+                IRQA=>INTA,
+                RD=>RD,
+                Reset=>ResetMicro_DUMMY,
+                RW=>WR,
+                IRQR=>INTR,
+                Data(7 downto 0)=>Puertos(7 downto 0));
    
 end BEHAVIORAL;
 
