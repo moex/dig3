@@ -53,7 +53,10 @@ architecture Behavioral of IRQControl is
  
 begin
 	
+	-- fuzzy logic
 	process(Clk, Reset)
+		--variable cuenta: integer;
+		--variable flag: boolean;
 	begin
 		if(Reset = '1')then
 			cuenta <= "00";
@@ -126,6 +129,9 @@ begin
 				IRQE when (RD='0' and CS='0' and Dir(0)='0')else
 				IRQT when (RD='0' and CS='0' and Dir(0)='1')else
 				(Others=>'Z');
+	
+	
+
 
 end Behavioral;
 

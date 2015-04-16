@@ -5,10 +5,10 @@
 --   ____  ____ 
 --  /   /\/   / 
 -- /___/  \  /    Vendor: Xilinx 
--- \   \   \/     Version : 9.2i
+-- \   \   \/     Version : 9.2.04i
 --  \   \         Application : ISE
 --  /   /         Filename : TestLatch.ant
--- /___/   /\     Timestamp : Wed Apr 08 15:09:40 2015
+-- /___/   /\     Timestamp : Mon Apr 06 21:34:26 2015
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -28,7 +28,7 @@ ENTITY TestLatch IS
 END TestLatch;
 
 ARCHITECTURE testbench_arch OF TestLatch IS
-    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Users\Nacho\Documents\GitHub\dig3\TUVIEJAENTANGA\TestLatch.ano";
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Dig3\dig3\TUVIEJAENTANGA\TestLatch.ano";
 
     COMPONENT Latch_De_Direcciones
         PORT (

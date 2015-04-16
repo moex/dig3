@@ -1,8 +1,8 @@
-EN reloj NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reloj.vhd sub00/vhpl00 1428516839
-EN irqcontrol NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd sub00/vhpl06 1428515885
-EN trans_datos NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd sub00/vhpl04 1428517028
-AR trans_datos paco2 C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd sub00/vhpl05 1428517029
-AR latch_de_direcciones paco C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd sub00/vhpl03 1428516577
-AR reloj nadadezurdos C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reloj.vhd sub00/vhpl01 1428516840
-EN latch_de_direcciones NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd sub00/vhpl02 1428516576
-AR irqcontrol behavioral C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd sub00/vhpl07 1428515886
+EN reloj NULL C:/Dig3/dig3/TUVIEJAENTANGA/Reloj.vhd sub00/vhpl00 1427932218
+EN irqcontrol NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd sub00/vhpl06 1428499498
+EN trans_datos NULL C:/Dig3/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd sub00/vhpl04 1427935935
+AR trans_datos paco2 C:/Dig3/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd sub00/vhpl05 1427935936
+AR latch_de_direcciones paco C:/Dig3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd sub00/vhpl03 1428366867
+AR reloj nadadezurdos C:/Dig3/dig3/TUVIEJAENTANGA/Reloj.vhd sub00/vhpl01 1427932219
+EN latch_de_direcciones NULL C:/Dig3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd sub00/vhpl02 1428366866
+AR irqcontrol behavioral C:/Dig3/dig3/TUVIEJAENTANGA/IRQControl.vhd sub00/vhpl07 1428366734
