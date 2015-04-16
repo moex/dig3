@@ -1,3 +1,0 @@
-MODULE TestPag
-SUBMODULE Reg_de_Paginacion
-INSTANCE UUT

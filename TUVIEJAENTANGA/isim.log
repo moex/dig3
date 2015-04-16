@@ -1,40 +1,34 @@
  command line:
-   ./TestPag_isim_beh.exe
+   ./Testclock_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  55558
+     -ipcport  54668
 
-Wed Apr 08 16:44:47 2015
+Wed Apr 08 15:14:08 2015
 
-Total Line Count : 46
+Total Line Count : 75
 
- Elaboration time : 0.0156 sec.
+ Elaboration time : 0 sec.
 
- Estimate current memory usage : 153.752 Meg. 
+ Estimate current memory usage : 153.756 Meg. 
 
- Total Signals          : 13
- Total Nets             : 61
- Total Signal Drivers   : 6
+ Total Signals          : 19
+ Total Nets             : 19
+ Total Signal Drivers   : 12
  Total Blocks           : 7
  Total Primitive Blocks : 1
- Total Processes        : 5
+ Total Processes        : 9
  Total Traceable Variables  : 0
- Total Scalar Nets and Variables : 61
-ntrace select -o on -n /TestPag/direccion 
-ntrace select -o on -n /TestPag/entrada 
-ntrace select -o on -n /TestPag/s 
-ntrace select -o on -n /TestPag/io 
-ntrace select -o on -n /TestPag/wr 
+ Total Scalar Nets and Variables : 19
+ntrace select -o on -n /Testclock/clk 
+ntrace select -o on -n /Testclock/mclk 
+ntrace select -o on -n /Testclock/ready 
+ntrace select -o on -n /Testclock/ioready 
+ntrace select -o on -n /Testclock/resetin 
+ntrace select -o on -n /Testclock/resetout 
+ntrace select -o on -n /Testclock/UUT/count 
+ntrace select -o on -n /Testclock/UUT/resetcount 
 ntrace start 
 isimrun 1000 ns 
 Simulator is doing circuit initialization process.
-WARNING:Simulator:29 - at 0 ns: Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an
-   arithmetic operand, the result will be 'X'(es).
 Finished circuit initialization process.
-
- Simulation time 0.0624 sec.
-
- Estimate current memory usage : 162.927 Meg. 
-
-Wed Apr 08 17:06:33 2015
-

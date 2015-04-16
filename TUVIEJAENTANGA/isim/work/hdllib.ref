@@ -1,14 +1,10 @@
 EN reloj NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reloj.vhd sub00/vhpl08 1428516846
-EN reg_de_paginacion NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd sub00/vhpl12 1428521241
 EN test1_tb NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TEST1_TB.vhw sub00/vhpl02 1428515888
 EN testlatch NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TestLatch.vhw sub00/vhpl06 1428516584
 AR test1_tb testbench_arch C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TEST1_TB.vhw sub00/vhpl03 1428515889
 EN irqcontrol NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd sub00/vhpl00 1428515886
-AR reg_de_paginacion fermin C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd sub00/vhpl13 1428521242
 EN testclock NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Testclock.vhw sub00/vhpl10 1428516848
-AR testpag testbench_arch C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TestPag.vhw sub00/vhpl15 1428522286
 AR testclock testbench_arch C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Testclock.vhw sub00/vhpl11 1428516849
-EN testpag NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TestPag.vhw sub00/vhpl14 1428522285
 AR latch_de_direcciones paco C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd sub00/vhpl05 1428516583
 AR reloj nadadezurdos C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reloj.vhd sub00/vhpl09 1428516847
 EN latch_de_direcciones NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd sub00/vhpl04 1428516582

@@ -1,4 +1,4 @@
-V3 28
+V3 21
 FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd 2015/04/08.13:41:28 J.36
 EN work/IRQControl 1428515886 \
       FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd \
@@ -15,14 +15,6 @@ EN work/Latch_De_Direcciones 1428516582 \
 AR work/Latch_De_Direcciones/PACO 1428516583 \
       FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd \
       EN work/Latch_De_Direcciones 1428516582
-FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd 2015/04/06.17:31:31 J.36
-EN work/Reg_de_Paginacion 1428521241 \
-      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd \
-      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
-      PB ieee/STD_LOGIC_UNSIGNED 1179176991
-AR work/Reg_de_Paginacion/Fermin 1428521242 \
-      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd \
-      EN work/Reg_de_Paginacion 1428521241
 FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reloj.vhd 2015/04/06.17:31:32 J.36
 EN work/Reloj 1428516846 \
       FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Reloj.vhd \
@@ -58,12 +50,3 @@ EN work/TestLatch 1428516584 \
 AR work/TestLatch/testbench_arch 1428516585 \
       FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TestLatch.vhw \
       EN work/TestLatch 1428516584 CP Latch_De_Direcciones
-FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TestPag.vhw 2015/04/08.16:44:38 J.36
-EN work/TestPag 1428522285 \
-      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TestPag.vhw \
-      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
-      PB ieee/STD_LOGIC_UNSIGNED 1179176991 PB ieee/STD_LOGIC_TEXTIO 1179176993 \
-      PB std/textio 1179176969
-AR work/TestPag/testbench_arch 1428522286 \
-      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TestPag.vhw \
-      EN work/TestPag 1428522285 CP Reg_de_Paginacion
