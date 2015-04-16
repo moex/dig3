@@ -2,24 +2,24 @@
    ./TEST1_TB_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  50877
+     -ipcport  61503
 
-Mon Apr 13 19:52:23 2015
+Thu Apr 16 12:52:06 2015
 
-Total Line Count : 119
+Total Line Count : 104
 
- Elaboration time : 0.0156 sec.
+ Elaboration time : 0 sec.
 
  Estimate current memory usage : 153.793 Meg. 
 
- Total Signals          : 27
- Total Nets             : 82
- Total Signal Drivers   : 19
+ Total Signals          : 26
+ Total Nets             : 80
+ Total Signal Drivers   : 18
  Total Blocks           : 7
  Total Primitive Blocks : 1
  Total Processes        : 12
  Total Traceable Variables  : 0
- Total Scalar Nets and Variables : 82
+ Total Scalar Nets and Variables : 80
 ntrace select -o on -n /TEST1_TB/clk 
 ntrace select -o on -n /TEST1_TB/reset 
 ntrace select -o on -n /TEST1_TB/irq 
@@ -43,4 +43,10 @@ WARNING:Simulator:29 - at 0 ns: Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an
 Finished circuit initialization process.
 isimrun 1000 ns 
 isimrun 1000 ns 
-isimrun 1000 ns 
+
+ Simulation time 0.280801 sec.
+
+ Estimate current memory usage : 162.968 Meg. 
+
+Thu Apr 16 17:38:37 2015
+

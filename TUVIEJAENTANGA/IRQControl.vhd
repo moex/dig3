@@ -94,29 +94,33 @@ begin
 	end process;
 		end1 <= '0' when IRQA = '1' else '1'; -- ¡¡¡¡¡si ya no importa mas cuenta, es necesario seguir utilizando esta señal????!!!!!!
 	--manejo de prioridades
-	process(S)
-	begin
-		if(end1='1') then		
-			if S(0)='1' then
-				J<="00000001";
-			elsif( S(1)='1')then
-				J<="00000010";
-			elsif( S(2)='1')then
-				J<="00000100";
-			elsif( S(3)='1')then
-				J<="00001000";
-			elsif( S(4)='1')then
-				J<="00010000";
-			elsif( S(5)='1')then
-				J<="00100000";
-			elsif( S(6)='1')then
-				J<="01000000";
-			elsif( S(7)='1')then
-				J<="10000000";
-			end if;
-		end if;
-	end process;
-	
+	--PASAR A ASICRONICO!!!!
+--	process(S)
+--	begin
+--		if(end1='1') then		
+--			if S(0)='1' then
+--				J<="00000001";
+--			elsif( S(1)='1')then
+--				J<="00000010";
+--			elsif( S(2)='1')then
+--				J<="00000100";
+--			elsif( S(3)='1')then
+--				J<="00001000";
+--			elsif( S(4)='1')then
+--				J<="00010000";
+--			elsif( S(5)='1')then
+--				J<="00100000";
+--			elsif( S(6)='1')then
+--				J<="01000000";
+--			elsif( S(7)='1')then
+--				J<="10000000";
+--			end if;
+--		end if;
+--	end process;
+--	
+	J<= "00000001" when (S(0)='1' and IRQE(0) = '1') else "00000010" when (S(1)='1' and S(0)='0' and IRQE(1) = '1') else "00000100" when (S(2)='1' and S(1 downto 0)= "00" and IRQE(2) = '1') else "00001000" when (S(3)='1' and S(2 downto 0)="0000" and IRQE(3) = '1')
+		else "00010000" when (S(4)='1' and S(3 downto 0)="0000" and IRQE(4) = '1') else "00100000" when (S(5)='1' and S(4 downto 0)="00000" and IRQE(5) = '1') else "01000000" when (S(6)='1' and S(5 downto 0)="000000" and IRQE(6) = '1')
+		else "10000000";
 	
 	CS <= '0' when (Dir(15)='0' and Dir(14)='1') else '1';--señal chip select
 	

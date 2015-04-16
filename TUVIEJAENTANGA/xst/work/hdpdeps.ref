@@ -1,55 +1,27 @@
-V3 29
-FL "E:/Agus/Facultad/Digital 3/dig3/Trans_Datos.vhd" 2015/04/13.17:44:44 J.36
-EN work/Trans_Datos 1428968777 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/Trans_Datos.vhd" PB ieee/std_logic_1164 1177545575 \
-      PB ieee/std_logic_arith 1177545576 PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/Trans_Datos/PACO2 1428968778 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/Trans_Datos.vhd" EN work/Trans_Datos 1428968777
-FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/IRQControl.vhd" 2015/04/13.20:11:00 J.36
-EN work/IRQControl 1428968783 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/IRQControl.vhd" \
+V3 19
+FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA//IRQControl.vhd" 2015/04/16.12:44:12 J.36
+EN work/IRQControl 1429199518 \
+      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA//IRQControl.vhd" \
       PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
       PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/IRQControl/Behavioral 1428968784 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/IRQControl.vhd" \
-      EN work/IRQControl 1428968783
-FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/LatchBHE.vhd" 2015/04/13.18:53:03 J.36
-EN work/LatchBHE 1428968785 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/LatchBHE.vhd" \
-      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
-      PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/LatchBHE/Behavioral 1428968786 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/LatchBHE.vhd" \
-      EN work/LatchBHE 1428968785
-FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd" 2015/04/13.17:44:44 J.36
-EN work/Latch_De_Direcciones 1428968775 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd" \
-      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
-      PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/Latch_De_Direcciones/PACO 1428968776 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd" \
-      EN work/Latch_De_Direcciones 1428968775
-FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd" 2015/04/13.17:44:44 J.36
-EN work/Reg_de_Paginacion 1428968779 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd" \
-      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
-      PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/Reg_de_Paginacion/Fermin 1428968780 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd" \
-      EN work/Reg_de_Paginacion 1428968779
-FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reloj.vhd" 2015/04/13.17:44:44 J.36
-EN work/Reloj 1428968781 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reloj.vhd" \
-      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
-      PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/Reloj/NADADEZURDOS 1428968782 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reloj.vhd" EN work/Reloj 1428968781
-FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/schematic.vhf" 2015/04/13.20:46:12 J.36
-EN work/schematic 1428968787 \
+AR work/IRQControl/Behavioral 1429199519 \
+      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA//IRQControl.vhd" \
+      EN work/IRQControl 1429199518
+FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/IRQControl.vhd" 2015/04/16.12:44:12 J.36
+FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/schematic.vhf" 2015/04/16.10:36:45 J.36
+EN work/schematic 1429191615 \
       FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/schematic.vhf" \
       PB ieee/std_logic_1164 1177545575 PH ieee/NUMERIC_STD 1177545583 LB UNISIM \
       PH unisim/VCOMPONENTS 1177545586
-AR work/schematic/BEHAVIORAL 1428968788 \
+AR work/schematic/BEHAVIORAL 1429191616 \
       FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/schematic.vhf" \
-      EN work/schematic 1428968787 CP Latch_De_Direcciones CP Trans_Datos \
+      EN work/schematic 1429191615 CP Latch_De_Direcciones CP Trans_Datos \
       CP Reg_de_Paginacion CP OR2 CP Reloj CP IRQControl CP LatchBHE
+FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/TopModule.vhf" 2015/04/16.10:38:47 J.36
+EN work/TopModule 0 \
+      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/TopModule.vhf" \
+      PB ieee/std_logic_1164 1177545575 PH ieee/NUMERIC_STD 1177545583 LB UNISIM \
+      PH unisim/VCOMPONENTS 1177545586
+AR work/TopModule/BEHAVIORAL 0 \
+      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/TopModule.vhf" \
+      EN work/TopModule 0 CP schematic
