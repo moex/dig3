@@ -1,0 +1,8 @@
+vhdl work "../Trans_Datos.vhd"
+vhdl work "Reloj.vhd"
+vhdl work "Reg_de_Paginacion.vhd"
+vhdl work "Latch_De_Direcciones.vhd"
+vhdl work "LatchBHE.vhd"
+vhdl work "IRQControl.vhd"
+vhdl work "schematic.vhf"
+vhdl work "TopLevelTest.vhw"

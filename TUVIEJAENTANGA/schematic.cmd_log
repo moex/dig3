@@ -1,1 +1,3 @@
 sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/schematic.sch" schematic.vhf
+xst -ise "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/TUVIEJAENTANGA.ise" -intstyle ise -ifn schematic.xst -ofn schematic.syr
+netgen -ise "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/TUVIEJAENTANGA.ise" -intstyle ise -ar Structure -tm schematic -w -dir netgen/synthesis -ofmt vhdl -sim schematic.ngc schematic_synthesis.vhd

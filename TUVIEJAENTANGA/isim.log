@@ -1,52 +1,64 @@
  command line:
-   ./TEST1_TB_isim_beh.exe
+   ./schematic_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  61503
+     -ipcport  56851
 
-Thu Apr 16 12:52:06 2015
+Sat Apr 18 21:24:35 2015
 
-Total Line Count : 104
+Total Line Count : 210
 
- Elaboration time : 0 sec.
+ Elaboration time : 0.0156 sec.
 
- Estimate current memory usage : 153.793 Meg. 
+ Estimate current memory usage : 153.973 Meg. 
 
- Total Signals          : 26
- Total Nets             : 80
- Total Signal Drivers   : 18
- Total Blocks           : 7
- Total Primitive Blocks : 1
- Total Processes        : 12
+ Total Signals          : 111
+ Total Nets             : 202
+ Total Signal Drivers   : 35
+ Total Blocks           : 16
+ Total Primitive Blocks : 10
+ Total Processes        : 32
  Total Traceable Variables  : 0
- Total Scalar Nets and Variables : 80
-ntrace select -o on -n /TEST1_TB/clk 
-ntrace select -o on -n /TEST1_TB/reset 
-ntrace select -o on -n /TEST1_TB/irq 
-ntrace select -o on -n /TEST1_TB/UUT/cuenta 
-ntrace select -o on -n /TEST1_TB/UUT/end1 
-ntrace select -o on -n /TEST1_TB/UUT/flag 
-ntrace select -o on -n /TEST1_TB/irqr 
-ntrace select -o on -n /TEST1_TB/irqa 
-ntrace select -o on -n /TEST1_TB/data 
-ntrace select -o on -n /TEST1_TB/rd 
-ntrace select -o on -n /TEST1_TB/rw 
-ntrace select -o on -n /TEST1_TB/dir 
-ntrace select -o on -n /TEST1_TB/UUT/irqe 
-ntrace select -o on -n /TEST1_TB/UUT/irqt 
-ntrace select -o on -n /TEST1_TB/UUT/reg 
+ Total Scalar Nets and Variables : 202
+ntrace select -o on -n /schematic/adh 
+ntrace select -o on -n /schematic/ale 
+ntrace select -o on -n /schematic/bhe 
+ntrace select -o on -n /schematic/clk 
+ntrace select -o on -n /schematic/den 
+ntrace select -o on -n /schematic/dtr 
+ntrace select -o on -n /schematic/inta 
+ntrace select -o on -n /schematic/irq 
+ntrace select -o on -n /schematic/mio 
+ntrace select -o on -n /schematic/rd 
+ntrace select -o on -n /schematic/readyin 
+ntrace select -o on -n /schematic/reset 
+ntrace select -o on -n /schematic/wr 
+ntrace select -o on -n /schematic/adcomp 
+ntrace select -o on -n /schematic/chips 
+ntrace select -o on -n /schematic/clkmicro 
+ntrace select -o on -n /schematic/highr 
+ntrace select -o on -n /schematic/highw 
+ntrace select -o on -n /schematic/intr 
+ntrace select -o on -n /schematic/lowr 
+ntrace select -o on -n /schematic/loww 
+ntrace select -o on -n /schematic/readymicro 
+ntrace select -o on -n /schematic/resetmicro 
+ntrace select -o on -n /schematic/adl 
+ntrace select -o on -n /schematic/puertos 
+ntrace select -o on -n /schematic/bhel 
+ntrace select -o on -n /schematic/clkmicro_dummy 
+ntrace select -o on -n /schematic/resetmicro_dummy 
+ntrace select -o on -n /schematic/adcomp_dummy 
 ntrace start 
 isimrun 1000 ns 
 Simulator is doing circuit initialization process.
 WARNING:Simulator:29 - at 0 ns: Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an
    arithmetic operand, the result will be 'X'(es).
 Finished circuit initialization process.
-isimrun 1000 ns 
-isimrun 1000 ns 
 
- Simulation time 0.280801 sec.
+ Simulation time 0.0624 sec.
 
- Estimate current memory usage : 162.968 Meg. 
+ Estimate current memory usage : 163.148 Meg. 
 
-Thu Apr 16 17:38:37 2015
+Sat Apr 18 21:25:06 2015
 

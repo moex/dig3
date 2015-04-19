@@ -7,12 +7,10 @@ BEGIN SCHEMATIC
     END ATTR
     BEGIN NETLIST
         SIGNAL ADh(3:0)
-        SIGNAL XLXN_106(3:0)
         SIGNAL Ale
         SIGNAL DTR
         SIGNAL DEN
         SIGNAL ADComp(19:0)
-        SIGNAL XLXN_111(19:0)
         SIGNAL MIO
         SIGNAL WR
         SIGNAL ADl(15:0)
@@ -23,41 +21,20 @@ BEGIN SCHEMATIC
         SIGNAL CLK
         SIGNAL ReadyIN
         SIGNAL Reset
-        SIGNAL XLXN_123
         SIGNAL ClkMicro
         SIGNAL ReadyMicro
-        SIGNAL XLXN_126
         SIGNAL ResetMicro
         SIGNAL HighW
         SIGNAL LowW
-        SIGNAL RW
         SIGNAL IRQ(7:0)
         SIGNAL INTA
         SIGNAL Puertos(7:0)
         SIGNAL ADComp(0)
         SIGNAL RD
         SIGNAL HighR
-        SIGNAL XLXN_138
         SIGNAL LowR
         SIGNAL INTR
-        SIGNAL XLXN_141
-        SIGNAL XLXN_143
-        SIGNAL XLXN_144
-        SIGNAL XLXN_145
-        SIGNAL XLXN_146
-        SIGNAL XLXN_147
-        SIGNAL XLXN_148
-        SIGNAL XLXN_149
-        SIGNAL XLXN_150
-        SIGNAL XLXN_151
-        SIGNAL XLXN_152
-        SIGNAL XLXN_153
-        SIGNAL XLXN_154
-        SIGNAL XLXN_155
-        SIGNAL XLXN_156
-        SIGNAL XLXN_157
-        SIGNAL XLXN_158
-        SIGNAL XLXN_161
+        SIGNAL XLXN_162
         PORT Input ADh(3:0)
         PORT Input Ale
         PORT Input DTR
@@ -77,7 +54,6 @@ BEGIN SCHEMATIC
         PORT Output ResetMicro
         PORT Output HighW
         PORT Output LowW
-        PORT Input RW
         PORT Input IRQ(7:0)
         PORT Input INTA
         PORT Input RD
@@ -193,7 +169,7 @@ BEGIN SCHEMATIC
             PIN Clk ClkMicro
             PIN IRQA INTA
             PIN RD RD
-            PIN RW RW
+            PIN RW WR
             PIN IRQ(7:0) IRQ(7:0)
             PIN Dir(19:0) ADComp(19:0)
             PIN Data(7:0) Puertos(7:0)
@@ -232,9 +208,9 @@ BEGIN SCHEMATIC
             WIRE 560 464 560 544
         END BRANCH
         BEGIN BRANCH Ale
-            WIRE 336 496 496 496
-            WIRE 496 400 496 496
-            WIRE 496 400 1056 400
+            WIRE 336 496 512 496
+            WIRE 512 400 1056 400
+            WIRE 512 400 512 496
         END BRANCH
         BEGIN BRANCH DTR
             WIRE 352 640 1104 640
@@ -268,11 +244,13 @@ BEGIN SCHEMATIC
             WIRE 416 256 416 384
         END BRANCH
         BEGIN BRANCH WR
-            WIRE 352 448 464 448
-            WIRE 464 288 464 448
-            WIRE 464 288 1632 288
+            WIRE 352 448 480 448
+            WIRE 480 448 480 1920
+            WIRE 480 1920 928 1920
+            WIRE 480 288 1632 288
             WIRE 1632 288 1632 464
             WIRE 1632 464 2032 464
+            WIRE 480 288 480 448
         END BRANCH
         BEGIN INSTANCE XLXI_3 2032 624 R0
         END INSTANCE
@@ -345,8 +323,7 @@ BEGIN SCHEMATIC
             WIRE 1392 1264 2688 1264
         END BRANCH
         BEGIN BRANCH ReadyMicro
-            WIRE 1312 1328 1328 1328
-            WIRE 1328 1328 2688 1328
+            WIRE 1312 1328 2688 1328
         END BRANCH
         BEGIN BRANCH ResetMicro
             WIRE 896 1536 1440 1536
@@ -378,15 +355,10 @@ BEGIN SCHEMATIC
         END INSTANCE
         BEGIN INSTANCE XLXI_14 928 2144 R0
         END INSTANCE
-        BEGIN BRANCH RW
-            WIRE 368 1200 496 1200
-            WIRE 496 1200 496 1920
-            WIRE 496 1920 928 1920
-        END BRANCH
         BEGIN BRANCH IRQ(7:0)
-            WIRE 416 1280 464 1280
-            WIRE 464 1280 464 2048
-            WIRE 464 2048 928 2048
+            WIRE 416 1280 448 1280
+            WIRE 448 1280 448 2048
+            WIRE 448 2048 928 2048
         END BRANCH
         BEGIN BRANCH INTA
             WIRE 368 1024 592 1024
@@ -457,7 +429,6 @@ BEGIN SCHEMATIC
         IOMARKER 352 384 MIO R180 28
         IOMARKER 368 1024 INTA R180 28
         IOMARKER 352 1104 RD R180 28
-        IOMARKER 368 1200 RW R180 28
         IOMARKER 416 1280 IRQ(7:0) R180 28
         INSTANCE XLXI_17 1840 1760 R0
         INSTANCE XLXI_16 1840 1616 R0

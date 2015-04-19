@@ -31,7 +31,6 @@ SIGNAL_ORDER_BEGIN
 /TopLevelTest/bhe
 /TopLevelTest/den
 /TopLevelTest/dtr
-/TopLevelTest/inta
 /TopLevelTest/mio
 /TopLevelTest/rd
 /TopLevelTest/readyin
@@ -41,10 +40,11 @@ SIGNAL_ORDER_BEGIN
 /TopLevelTest/chips
 /TopLevelTest/highr
 /TopLevelTest/highw
-/TopLevelTest/intr
 /TopLevelTest/lowr
 /TopLevelTest/loww
 /TopLevelTest/readymicro
+/TopLevelTest/intr
+/TopLevelTest/inta
 /TopLevelTest/irq
 /TopLevelTest/adh
 /TopLevelTest/adl
@@ -79,9 +79,6 @@ SIGPROPS_BEGIN
 /TopLevelTest/dtr
 2
 0
-/TopLevelTest/inta
-2
-0
 /TopLevelTest/mio
 2
 0
@@ -109,9 +106,6 @@ SIGPROPS_BEGIN
 /TopLevelTest/highw
 2
 0
-/TopLevelTest/intr
-2
-0
 /TopLevelTest/lowr
 2
 0
@@ -119,6 +113,12 @@ SIGPROPS_BEGIN
 2
 0
 /TopLevelTest/readymicro
+2
+0
+/TopLevelTest/intr
+2
+0
+/TopLevelTest/inta
 2
 0
 /TopLevelTest/irq

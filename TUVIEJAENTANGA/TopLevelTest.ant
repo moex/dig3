@@ -8,7 +8,7 @@
 -- \   \   \/     Version : 9.2i
 --  \   \         Application : ISE
 --  /   /         Filename : TopLevelTest.ant
--- /___/   /\     Timestamp : Thu Apr 16 17:38:26 2015
+-- /___/   /\     Timestamp : Sat Apr 18 21:20:19 2015
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -401,8 +401,12 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
                 WAIT FOR 40000 ps;
                 ADl <= "0000000001000000";
                 -- -------------------------------------
+                -- -------------  Current Time:  1.505e+006ps
+                WAIT FOR 120000 ps;
+                IRQ <= "00000011";
+                -- -------------------------------------
                 -- -------------  Current Time:  1.585e+006ps
-                WAIT FOR 200000 ps;
+                WAIT FOR 80000 ps;
                 WR <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  1.625e+006ps
@@ -417,45 +421,37 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
                 WAIT FOR 40000 ps;
                 Ale <= '1';
                 MIO <= '1';
-                IRQ <= "00001000";
                 -- -------------------------------------
                 -- -------------  Current Time:  1.745e+006ps
                 WAIT FOR 40000 ps;
                 BHE <= '1';
                 DEN <= '0';
                 ADh <= "0010";
-                IRQ <= "00000000";
                 ADl <= "1111101011111110";
                 -- -------------------------------------
                 -- -------------  Current Time:  1.785e+006ps
                 WAIT FOR 40000 ps;
                 Ale <= '0';
-                IRQ <= "00010000";
                 -- -------------------------------------
                 -- -------------  Current Time:  1.825e+006ps
                 WAIT FOR 40000 ps;
                 BHE <= '0';
-                IRQ <= "00000000";
+                INTA <= '0';
                 -- -------------------------------------
                 -- -------------  Current Time:  1.865e+006ps
                 WAIT FOR 40000 ps;
-                IRQ <= "00000010";
                 ADl <= "1111111011110000";
                 -- -------------------------------------
-                -- -------------  Current Time:  1.905e+006ps
-                WAIT FOR 40000 ps;
-                IRQ <= "01000100";
-                -- -------------------------------------
                 -- -------------  Current Time:  1.945e+006ps
-                WAIT FOR 40000 ps;
-                IRQ <= "00100000";
+                WAIT FOR 80000 ps;
+                IRQ <= "00010101";
                 -- -------------------------------------
-                -- -------------  Current Time:  1.985e+006ps
-                WAIT FOR 40000 ps;
-                IRQ <= "00000000";
+                -- -------------  Current Time:  2.065e+006ps
+                WAIT FOR 120000 ps;
+                INTA <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  2.105e+006ps
-                WAIT FOR 120000 ps;
+                WAIT FOR 40000 ps;
                 DEN <= '1';
                 ADl <= "ZZZZZZZZZZZZZZZZ";
                 -- -------------------------------------
@@ -463,7 +459,23 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
                 WAIT FOR 40000 ps;
                 MIO <= '0';
                 -- -------------------------------------
-                WAIT FOR 895000 ps;
+                -- -------------  Current Time:  2.185e+006ps
+                WAIT FOR 40000 ps;
+                Ale <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  2.265e+006ps
+                WAIT FOR 80000 ps;
+                Ale <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  2.305e+006ps
+                WAIT FOR 40000 ps;
+                INTA <= '0';
+                -- -------------------------------------
+                -- -------------  Current Time:  2.545e+006ps
+                WAIT FOR 240000 ps;
+                INTA <= '1';
+                -- -------------------------------------
+                WAIT FOR 495000 ps;
 
                 STD.TEXTIO.write(TX_OUT, string'("Total[]"));
                 STD.TEXTIO.writeline(RESULTS, TX_OUT);

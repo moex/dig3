@@ -48,7 +48,7 @@ architecture Behavioral of IRQControl is
  signal IRQT: std_logic_vector(7 downto 0);
  signal CS: std_logic;
  signal end1: std_logic;
- --signal cuenta: std_logic_vector(1 downto 0);
+ signal cuenta: std_logic_vector(1 downto 0) := "00";
  signal flag: std_logic;
  signal reg : std_logic_vector(2 downto 0) := "001";
 begin
@@ -63,64 +63,27 @@ begin
 			
 	-- fuzzy logic
 	process(Clk, Reset)
-		--variable cuenta: integer;
+		--variable cuenta: integer := 0;
 		--variable flag: boolean;
 	begin
 		if(Reset = '1')then
---			cuenta <= "00";
 			flag <= '0';
 		elsif(Clk='1' and clk'event)then
-		if (reg = "100") then
-			if(flag = '0')then
-				if(IRQA = '0')then
---					cuenta<= cuenta + "01";
-					flag <= '1';
+			if (reg = "100") then
+				if(flag = '0')then
+					if(IRQA = '0')then
+						flag <= '1';
+						cuenta <= cuenta + "01";
+					end if;
+				else
+					if(IRQA = '1')then
+						flag <= '0';
+						if(cuenta = "10") then cuenta <= "00"; end if;
+					end if;
 				end if;
-			else
-				if(IRQA = '1')then
-					flag <= '0';
---					if(cuenta = "10")then
---						cuenta<= "00";
---						end if;
-				end if;
-			end if;
-		end if;
-			--if(cuenta = "10" and IRQA = '1')then 
-			--	end1 <= '0';
-			--else
-			--	end1<= '1';
-			--end if;
+			end if;	
 		end if;
 	end process;
-		end1 <= '0' when IRQA = '1' else '1'; -- ¡¡¡¡¡si ya no importa mas cuenta, es necesario seguir utilizando esta señal????!!!!!!
-	--manejo de prioridades
-	--PASAR A ASICRONICO!!!!
---	process(S)
---	begin
---		if(end1='1') then		
---			if S(0)='1' then
---				J<="00000001";
---			elsif( S(1)='1')then
---				J<="00000010";
---			elsif( S(2)='1')then
---				J<="00000100";
---			elsif( S(3)='1')then
---				J<="00001000";
---			elsif( S(4)='1')then
---				J<="00010000";
---			elsif( S(5)='1')then
---				J<="00100000";
---			elsif( S(6)='1')then
---				J<="01000000";
---			elsif( S(7)='1')then
---				J<="10000000";
---			end if;
---		end if;
---	end process;
---	
-	J<= "00000001" when (S(0)='1' and IRQE(0) = '1') else "00000010" when (S(1)='1' and S(0)='0' and IRQE(1) = '1') else "00000100" when (S(2)='1' and S(1 downto 0)= "00" and IRQE(2) = '1') else "00001000" when (S(3)='1' and S(2 downto 0)="0000" and IRQE(3) = '1')
-		else "00010000" when (S(4)='1' and S(3 downto 0)="0000" and IRQE(4) = '1') else "00100000" when (S(5)='1' and S(4 downto 0)="00000" and IRQE(5) = '1') else "01000000" when (S(6)='1' and S(5 downto 0)="000000" and IRQE(6) = '1')
-		else "10000000";
 	
 	CS <= '0' when (Dir(15)='0' and Dir(14)='1') else '1';--señal chip select
 	
@@ -128,16 +91,27 @@ begin
 	IRQE <= (Others => '0') when Reset = '1' else Data when (RW = '0' and CS = '0' and Dir(0) = '0');
 	IRQT <= (Others => '0') when Reset = '1';
 	
+	--interrupt request
+	IRQR <= '1' when (irq /= "00000000")and end1='0' else '0' when (Reset='1' or flag = '1');
 	
 	--interrupcion después del enable
-	S <= IRQE and IRQ;
+	end1 <= '1' when (irq /= "00000000") else '0' when(irqa='1' and cuenta = "10")or(reset='1');
+	S <= (IRQE and IRQ) + IRQT when end1 = '0' else (Others => '0') when (irqa='1' and cuenta="10")or(reset='1'); --
 	
-	--interrupt request
-	IRQR <= '1' when (S /= "00000000" and end1='1') else '0' when (end1='0' or Reset='1' or flag = '0');
-	
+	--manejo de prioridades
+	J<=     "00000001" when (S(0)='1')
+		else "00000010" when (S(1)='1' and S(0)='0')
+		else "00000100" when (S(2)='1' and S(1 downto 0)="00")
+		else "00001000" when (S(3)='1' and S(2 downto 0)="000")
+		else "00010000" when (S(4)='1' and S(3 downto 0)="0000")
+		else "00100000" when (S(5)='1' and S(4 downto 0)="00000")
+		else "01000000" when (S(6)='1' and S(5 downto 0)="000000")
+		else "10000000" when (S(7)='1' and S(6 downto 0)="0000000")
+		else "00000000";
+		
 	--bus de datos tres estados
 	
-	Data <= J+IRQT when (IRQA='0') else
+	Data <=  J when (IRQA='0') else
 				IRQE when (RD='0' and CS='0' and Dir(0)='0')else
 				IRQT when (RD='0' and CS='0' and Dir(0)='1')else
 				(Others=>'Z');

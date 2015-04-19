@@ -8,7 +8,7 @@
 -- \   \   \/     Version : 9.2i
 --  \   \         Application : ISE
 --  /   /         Filename : TEST1_TB.ant
--- /___/   /\     Timestamp : Thu Apr 16 12:51:58 2015
+-- /___/   /\     Timestamp : Sat Apr 18 20:57:21 2015
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -166,17 +166,26 @@ ARCHITECTURE testbench_arch OF TEST1_TB IS
                 -- -------------------------------------
                 -- -------------  Current Time:  1589ns
                 WAIT FOR 80 ns;
+                IRQ <= "00010010";
+                -- -------------------------------------
+                -- -------------  Current Time:  2069ns
+                WAIT FOR 480 ns;
                 IRQA <= '1';
                 -- -------------------------------------
-                -- -------------  Current Time:  1669ns
-                WAIT FOR 80 ns;
-                IRQA <= '0';
-                -- -------------------------------------
-                -- -------------  Current Time:  1909ns
+                -- -------------  Current Time:  2309ns
                 WAIT FOR 240 ns;
+                IRQA <= '0';
+                IRQ <= "00000000";
+                -- -------------------------------------
+                -- -------------  Current Time:  3029ns
+                WAIT FOR 720 ns;
                 IRQA <= '1';
                 -- -------------------------------------
-                WAIT FOR 8171 ns;
+                -- -------------  Current Time:  6709ns
+                WAIT FOR 3680 ns;
+                IRQ <= "00001000";
+                -- -------------------------------------
+                WAIT FOR 3371 ns;
 
                 STD.TEXTIO.write(TX_OUT, string'("Total[]"));
                 STD.TEXTIO.writeline(RESULTS, TX_OUT);

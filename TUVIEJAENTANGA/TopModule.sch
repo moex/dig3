@@ -7,7 +7,7 @@ BEGIN SCHEMATIC
     END ATTR
     BEGIN NETLIST
         BEGIN BLOCKDEF schematic
-            TIMESTAMP 2015 4 13 23 58 26
+            TIMESTAMP 2015 4 19 0 27 14
             RECTANGLE N 64 -896 320 0 
             RECTANGLE N 0 -876 64 -852 
             LINE N 64 -864 0 -864 
@@ -20,7 +20,6 @@ BEGIN SCHEMATIC
             LINE N 64 -416 0 -416 
             LINE N 64 -352 0 -352 
             LINE N 64 -288 0 -288 
-            LINE N 64 -224 0 -224 
             RECTANGLE N 0 -172 64 -148 
             LINE N 64 -160 0 -160 
             LINE N 64 -96 0 -96 
@@ -53,10 +52,11 @@ BEGIN SCHEMATIC
             PIN CLK
             PIN ReadyIN
             PIN Reset
-            PIN RW
             PIN IRQ(7:0)
             PIN INTA
             PIN RD
+            PIN ADl(15:0)
+            PIN Puertos(15:0)
             PIN ADComp(19:0)
             PIN CHIPs(2:0)
             PIN ClkMicro
@@ -67,8 +67,6 @@ BEGIN SCHEMATIC
             PIN HighR
             PIN LowR
             PIN INTR
-            PIN ADl(15:0)
-            PIN Puertos(15:0)
         END BLOCK
     END NETLIST
     BEGIN SHEET 1 3520 2720
