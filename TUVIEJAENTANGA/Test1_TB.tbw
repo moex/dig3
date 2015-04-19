@@ -1,9 +1,9 @@
 version 3
-E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/IRQControl.vhd
+C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd
 IRQControl
 VHDL
 VHDL
-E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Test1_TB.xwv
+C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/Test1_TB.xwv
 Clocked
 -
 -
@@ -40,6 +40,7 @@ Reset
 Clk
 SIGNAL_LIST_END
 SIGNALS_NOT_ON_DISPLAY
+IRQR
 IRQR_DIFF
 SIGNALS_NOT_ON_DISPLAY_END
 MARKER_LIST_BEGIN

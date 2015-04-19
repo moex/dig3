@@ -8,7 +8,7 @@
 -- \   \   \/     Version : 9.2i
 --  \   \         Application : ISE
 --  /   /         Filename : TEST1_TB.ant
--- /___/   /\     Timestamp : Sat Apr 18 20:57:21 2015
+-- /___/   /\     Timestamp : Sun Apr 19 17:32:40 2015
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -28,7 +28,7 @@ ENTITY TEST1_TB IS
 END TEST1_TB;
 
 ARCHITECTURE testbench_arch OF TEST1_TB IS
-    FILE RESULTS: TEXT OPEN WRITE_MODE IS "E:\Agus\Facultad\Digital 3\dig3\TUVIEJAENTANGA\TEST1_TB.ano";
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Users\Nacho\Documents\GitHub\dig3\TUVIEJAENTANGA\TEST1_TB.ano";
 
     COMPONENT IRQControl
         PORT (
@@ -177,8 +177,12 @@ ARCHITECTURE testbench_arch OF TEST1_TB IS
                 IRQA <= '0';
                 IRQ <= "00000000";
                 -- -------------------------------------
+                -- -------------  Current Time:  2789ns
+                WAIT FOR 480 ns;
+                IRQ <= "00010010";
+                -- -------------------------------------
                 -- -------------  Current Time:  3029ns
-                WAIT FOR 720 ns;
+                WAIT FOR 240 ns;
                 IRQA <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  6709ns

@@ -1,6 +1,0 @@
-EN irqcontrol NULL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/IRQControl.vhd" sub00/vhpl04 1429403316
-EN trans_datos NULL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd" sub00/vhpl02 1429403308
-AR trans_datos paco2 "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/../Trans_Datos.vhd" sub00/vhpl03 1429403309
-AR latch_de_direcciones paco "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd" sub00/vhpl01 1429403296
-EN latch_de_direcciones NULL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd" sub00/vhpl00 1429403295
-AR irqcontrol behavioral "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/IRQControl.vhd" sub00/vhpl05 1429403317

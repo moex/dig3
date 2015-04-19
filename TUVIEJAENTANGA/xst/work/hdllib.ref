@@ -1,14 +1,8 @@
-EN reloj NULL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reloj.vhd" sub00/vhpl06 1429403228
-EN reg_de_paginacion NULL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd" sub00/vhpl04 1429403226
-EN irqcontrol NULL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/IRQControl.vhd" sub00/vhpl08 1429403230
-AR schematic behavioral "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/schematic.vhf" sub00/vhpl13 1429403235
-AR reg_de_paginacion fermin "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd" sub00/vhpl05 1429403227
-AR latchbhe behavioral "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/LatchBHE.vhd" sub00/vhpl11 1429403233
-EN schematic NULL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/schematic.vhf" sub00/vhpl12 1429403234
-EN trans_datos NULL "E:/Agus/Facultad/Digital 3/dig3/Trans_Datos.vhd" sub00/vhpl02 1429403224
-AR trans_datos paco2 "E:/Agus/Facultad/Digital 3/dig3/Trans_Datos.vhd" sub00/vhpl03 1429403225
-EN latchbhe NULL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/LatchBHE.vhd" sub00/vhpl10 1429403232
-AR latch_de_direcciones paco "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd" sub00/vhpl01 1429403487
-AR reloj nadadezurdos "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reloj.vhd" sub00/vhpl07 1429403229
-EN latch_de_direcciones NULL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd" sub00/vhpl00 1429403486
-AR irqcontrol behavioral "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/IRQControl.vhd" sub00/vhpl09 1429403231
+EN k6t1008 NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/K6T1008.vhd sub00/vhpl04 1429477773
+EN i80c86 NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/80c86.vhd sub00/vhpl06 1429478197
+AR k6t1008 behavioral C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/K6T1008.vhd sub00/vhpl05 1429477774
+EN irqcontrol NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd sub00/vhpl00 1429475559
+AR i80c86 behavioral C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/80c86.vhd sub00/vhpl07 1429478198
+EN am29f040 NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/AM29F040.vhd sub00/vhpl02 1429477918
+AR am29f040 behavioral C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/AM29F040.vhd sub00/vhpl03 1429477919
+AR irqcontrol behavioral C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd sub00/vhpl01 1429475560

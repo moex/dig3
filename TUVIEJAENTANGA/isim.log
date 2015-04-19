@@ -1,64 +1,65 @@
  command line:
-   ./schematic_isim_beh.exe
+   ./TopLevelTest_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  56851
+     -ipcport  50994
 
-Sat Apr 18 21:24:35 2015
+Sun Apr 19 17:41:25 2015
 
-Total Line Count : 210
+Total Line Count : 332
 
  Elaboration time : 0.0156 sec.
 
- Estimate current memory usage : 153.973 Meg. 
+ Estimate current memory usage : 154.067 Meg. 
 
- Total Signals          : 111
- Total Nets             : 202
- Total Signal Drivers   : 35
- Total Blocks           : 16
+ Total Signals          : 135
+ Total Nets             : 201
+ Total Signal Drivers   : 48
+ Total Blocks           : 19
  Total Primitive Blocks : 10
- Total Processes        : 32
+ Total Processes        : 33
  Total Traceable Variables  : 0
- Total Scalar Nets and Variables : 202
-ntrace select -o on -n /schematic/adh 
-ntrace select -o on -n /schematic/ale 
-ntrace select -o on -n /schematic/bhe 
-ntrace select -o on -n /schematic/clk 
-ntrace select -o on -n /schematic/den 
-ntrace select -o on -n /schematic/dtr 
-ntrace select -o on -n /schematic/inta 
-ntrace select -o on -n /schematic/irq 
-ntrace select -o on -n /schematic/mio 
-ntrace select -o on -n /schematic/rd 
-ntrace select -o on -n /schematic/readyin 
-ntrace select -o on -n /schematic/reset 
-ntrace select -o on -n /schematic/wr 
-ntrace select -o on -n /schematic/adcomp 
-ntrace select -o on -n /schematic/chips 
-ntrace select -o on -n /schematic/clkmicro 
-ntrace select -o on -n /schematic/highr 
-ntrace select -o on -n /schematic/highw 
-ntrace select -o on -n /schematic/intr 
-ntrace select -o on -n /schematic/lowr 
-ntrace select -o on -n /schematic/loww 
-ntrace select -o on -n /schematic/readymicro 
-ntrace select -o on -n /schematic/resetmicro 
-ntrace select -o on -n /schematic/adl 
-ntrace select -o on -n /schematic/puertos 
-ntrace select -o on -n /schematic/bhel 
-ntrace select -o on -n /schematic/clkmicro_dummy 
-ntrace select -o on -n /schematic/resetmicro_dummy 
-ntrace select -o on -n /schematic/adcomp_dummy 
+ Total Scalar Nets and Variables : 201
+ntrace select -o on -n /TopLevelTest/clkmicro 
+ntrace select -o on -n /TopLevelTest/ale 
+ntrace select -o on -n /TopLevelTest/reset 
+ntrace select -o on -n /TopLevelTest/bhe 
+ntrace select -o on -n /TopLevelTest/den 
+ntrace select -o on -n /TopLevelTest/dtr 
+ntrace select -o on -n /TopLevelTest/mio 
+ntrace select -o on -n /TopLevelTest/readyin 
+ntrace select -o on -n /TopLevelTest/rd 
+ntrace select -o on -n /TopLevelTest/wr 
+ntrace select -o on -n /TopLevelTest/chips 
+ntrace select -o on -n /TopLevelTest/highr 
+ntrace select -o on -n /TopLevelTest/highw 
+ntrace select -o on -n /TopLevelTest/lowr 
+ntrace select -o on -n /TopLevelTest/loww 
+ntrace select -o on -n /TopLevelTest/readymicro 
+ntrace select -o on -n /TopLevelTest/resetmicro 
+ntrace select -o on -n /TopLevelTest/adcomp 
+ntrace select -o on -n /TopLevelTest/puertos 
+ntrace select -o on -n /TopLevelTest/inta 
+ntrace select -o on -n /TopLevelTest/irq 
+ntrace select -o on -n /TopLevelTest/UUT/XLXI_14/irqe 
+ntrace select -o on -n /TopLevelTest/UUT/XLXI_14/irqt 
+ntrace select -o on -n /TopLevelTest/intr 
+ntrace select -o on -n /TopLevelTest/UUT/XLXI_14/end1 
+ntrace select -o on -n /TopLevelTest/UUT/XLXI_14/cuenta 
+ntrace select -o on -n /TopLevelTest/UUT/XLXI_14/reg 
 ntrace start 
 isimrun 1000 ns 
 Simulator is doing circuit initialization process.
 WARNING:Simulator:29 - at 0 ns: Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an
    arithmetic operand, the result will be 'X'(es).
 Finished circuit initialization process.
+isimrun 1000 ns 
+isimrun 1000 ns 
+isimrun 1000 ns 
 
  Simulation time 0.0624 sec.
 
- Estimate current memory usage : 163.148 Meg. 
+ Estimate current memory usage : 163.242 Meg. 
 
-Sat Apr 18 21:25:06 2015
+Sun Apr 19 18:27:45 2015
 

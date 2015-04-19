@@ -1,0 +1,8 @@
+[Inputs]
+WE
+CE
+OE
+=A[18:0]=
+[Outputs]
+[BiDir]
+=DQ[8:0]=

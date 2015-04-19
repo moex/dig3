@@ -8,7 +8,7 @@
 -- \   \   \/     Version : 9.2i
 --  \   \         Application : ISE
 --  /   /         Filename : TopLevelTest.ant
--- /___/   /\     Timestamp : Sat Apr 18 21:20:19 2015
+-- /___/   /\     Timestamp : Sun Apr 19 17:37:20 2015
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -31,7 +31,7 @@ ENTITY TopLevelTest IS
 END TopLevelTest;
 
 ARCHITECTURE testbench_arch OF TopLevelTest IS
-    FILE RESULTS: TEXT OPEN WRITE_MODE IS "E:\Agus\Facultad\Digital 3\dig3\TUVIEJAENTANGA\TopLevelTest.ano";
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Users\Nacho\Documents\GitHub\dig3\TUVIEJAENTANGA\TopLevelTest.ano";
 
     COMPONENT schematic
         PORT (
@@ -47,7 +47,6 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
             RD : In std_logic;
             ReadyIN : In std_logic;
             Reset : In std_logic;
-            RW : In std_logic;
             WR : In std_logic;
             ADComp : Out std_logic_vector (19 DownTo 0);
             CHIPs : Out std_logic_vector (2 DownTo 0);
@@ -76,7 +75,6 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
     SIGNAL RD : std_logic := '0';
     SIGNAL ReadyIN : std_logic := '0';
     SIGNAL Reset : std_logic := '0';
-    SIGNAL RW : std_logic := '0';
     SIGNAL WR : std_logic := '0';
     SIGNAL ADComp : std_logic_vector (19 DownTo 0) := "00000000000000000000";
     SIGNAL CHIPs : std_logic_vector (2 DownTo 0) := "000";
@@ -113,7 +111,6 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
             RD => RD,
             ReadyIN => ReadyIN,
             Reset => Reset,
-            RW => RW,
             WR => WR,
             ADComp => ADComp,
             CHIPs => CHIPs,
@@ -348,12 +345,11 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
                 -- -------------  Current Time:  745000ps
                 WAIT FOR 480000 ps;
                 Ale <= '1';
-                ADl <= "0100101010111100";
+                ADl <= "0100101010110010";
                 -- -------------------------------------
                 -- -------------  Current Time:  785000ps
                 WAIT FOR 40000 ps;
                 DEN <= '0';
-                Reset <= '1';
                 -- -------------------------------------
                 -- -------------  Current Time:  825000ps
                 WAIT FOR 40000 ps;
@@ -361,12 +357,11 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
                 -- -------------------------------------
                 -- -------------  Current Time:  865000ps
                 WAIT FOR 40000 ps;
-                Reset <= '0';
                 WR <= '0';
                 -- -------------------------------------
                 -- -------------  Current Time:  905000ps
                 WAIT FOR 40000 ps;
-                ADl <= "0000000000100000";
+                ADl <= "0000000011111111";
                 -- -------------------------------------
                 -- -------------  Current Time:  1.105e+006ps
                 WAIT FOR 200000 ps;
@@ -403,7 +398,7 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
                 -- -------------------------------------
                 -- -------------  Current Time:  1.505e+006ps
                 WAIT FOR 120000 ps;
-                IRQ <= "00000011";
+                IRQ <= "00000010";
                 -- -------------------------------------
                 -- -------------  Current Time:  1.585e+006ps
                 WAIT FOR 80000 ps;
@@ -427,7 +422,6 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
                 BHE <= '1';
                 DEN <= '0';
                 ADh <= "0010";
-                ADl <= "1111101011111110";
                 -- -------------------------------------
                 -- -------------  Current Time:  1.785e+006ps
                 WAIT FOR 40000 ps;
@@ -438,12 +432,8 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
                 BHE <= '0';
                 INTA <= '0';
                 -- -------------------------------------
-                -- -------------  Current Time:  1.865e+006ps
-                WAIT FOR 40000 ps;
-                ADl <= "1111111011110000";
-                -- -------------------------------------
                 -- -------------  Current Time:  1.945e+006ps
-                WAIT FOR 80000 ps;
+                WAIT FOR 120000 ps;
                 IRQ <= "00010101";
                 -- -------------------------------------
                 -- -------------  Current Time:  2.065e+006ps
@@ -453,7 +443,6 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
                 -- -------------  Current Time:  2.105e+006ps
                 WAIT FOR 40000 ps;
                 DEN <= '1';
-                ADl <= "ZZZZZZZZZZZZZZZZ";
                 -- -------------------------------------
                 -- -------------  Current Time:  2.145e+006ps
                 WAIT FOR 40000 ps;

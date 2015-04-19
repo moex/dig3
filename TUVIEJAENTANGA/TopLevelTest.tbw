@@ -1,9 +1,9 @@
 version 3
-E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/schematic.vhf
+C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/schematic.vhf
 schematic
 VHDL
 VHDL
-E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/TopLevelTest.xwv
+C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TopLevelTest.xwv
 Clocked
 -
 -
@@ -120,7 +120,6 @@ DEN
 DTR
 MIO
 RD
-RW
 ReadyIN
 WR
 ADComp

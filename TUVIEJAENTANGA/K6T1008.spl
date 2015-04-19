@@ -1,0 +1,8 @@
+[Inputs]
+OE
+WE
+CS
+=A[16:0]=
+[Outputs]
+[BiDir]
+=IO[8:1]=

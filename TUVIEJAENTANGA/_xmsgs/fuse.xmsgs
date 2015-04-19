@@ -5,11 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="Simulator" num="170" delta="unknown" ><arg fmt="%s" index="1">work/Latch_De_Direcciones/PACO</arg> is not compiled properly. Please recompile <arg fmt="%s" index="2">work/Latch_De_Direcciones/PACO</arg> in file &quot;<arg fmt="%s" index="3">E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd</arg>&quot; without -incremental option.
-</msg>
-
-<msg type="error" file="Simulator" num="199" delta="unknown" >Failed when handling dependencies for entity <arg fmt="%s" index="1">topleveltest</arg>, architecture <arg fmt="%s" index="2">testbench_arch</arg>
-</msg>
-
 </messages>
 

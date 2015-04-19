@@ -1,55 +1,33 @@
-V3 29
-FL "E:/Agus/Facultad/Digital 3/dig3/Trans_Datos.vhd" 2015/04/13.17:44:44 J.36
-EN work/Trans_Datos 1429403224 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/Trans_Datos.vhd" PB ieee/std_logic_1164 1177545575 \
-      PB ieee/std_logic_arith 1177545576 PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/Trans_Datos/PACO2 1429403225 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/Trans_Datos.vhd" EN work/Trans_Datos 1429403224
-FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/IRQControl.vhd" 2015/04/18.20:57:17 J.36
-EN work/IRQControl 1429403230 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/IRQControl.vhd" \
+V3 12
+FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/80c86.vhd 2015/04/19.18:16:29 J.36
+EN work/i80c86 1429478197 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/80c86.vhd \
       PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
       PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/IRQControl/Behavioral 1429403231 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/IRQControl.vhd" \
-      EN work/IRQControl 1429403230
-FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/LatchBHE.vhd" 2015/04/13.18:53:03 J.36
-EN work/LatchBHE 1429403232 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/LatchBHE.vhd" \
+AR work/i80c86/Behavioral 1429478198 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/80c86.vhd \
+      EN work/i80c86 1429478197
+FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/AM29F040.vhd 2015/04/19.18:04:32 J.36
+EN work/AM29F040 1429477918 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/AM29F040.vhd \
       PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
       PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/LatchBHE/Behavioral 1429403233 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/LatchBHE.vhd" \
-      EN work/LatchBHE 1429403232
-FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd" 2015/04/13.17:44:44 J.36
-EN work/Latch_De_Direcciones 1429403486 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd" \
+AR work/AM29F040/Behavioral 1429477919 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/AM29F040.vhd \
+      EN work/AM29F040 1429477918
+FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd 2015/04/19.17:20:46 J.36
+EN work/IRQControl 1429475559 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd \
       PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
       PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/Latch_De_Direcciones/PACO 1429403487 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Latch_De_Direcciones.vhd" \
-      EN work/Latch_De_Direcciones 1429403486
-FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd" 2015/04/13.17:44:44 J.36
-EN work/Reg_de_Paginacion 1429403226 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd" \
+AR work/IRQControl/Behavioral 1429475560 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd \
+      EN work/IRQControl 1429475559
+FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/K6T1008.vhd 2015/04/19.18:08:59 J.36
+EN work/K6T1008 1429477773 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/K6T1008.vhd \
       PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
       PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/Reg_de_Paginacion/Fermin 1429403227 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reg_de_Paginacion.vhd" \
-      EN work/Reg_de_Paginacion 1429403226
-FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reloj.vhd" 2015/04/13.17:44:44 J.36
-EN work/Reloj 1429403228 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reloj.vhd" \
-      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
-      PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/Reloj/NADADEZURDOS 1429403229 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/Reloj.vhd" EN work/Reloj 1429403228
-FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/schematic.vhf" 2015/04/18.21:26:03 J.36
-EN work/schematic 1429403234 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/schematic.vhf" \
-      PB ieee/std_logic_1164 1177545575 PH ieee/NUMERIC_STD 1177545583 LB UNISIM \
-      PH unisim/VCOMPONENTS 1177545586
-AR work/schematic/BEHAVIORAL 1429403235 \
-      FL "E:/Agus/Facultad/Digital 3/dig3/TUVIEJAENTANGA/schematic.vhf" \
-      EN work/schematic 1429403234 CP Latch_De_Direcciones CP Trans_Datos \
-      CP Reg_de_Paginacion CP OR2 CP Reloj CP IRQControl CP LatchBHE
+AR work/K6T1008/Behavioral 1429477774 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/K6T1008.vhd \
+      EN work/K6T1008 1429477773

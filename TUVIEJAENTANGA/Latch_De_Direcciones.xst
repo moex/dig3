@@ -1,4 +1,0 @@
-set -tmpdir "./xst/projnav.tmp"
-elaborate
--ifn Latch_De_Direcciones.prj
--ifmt mixed

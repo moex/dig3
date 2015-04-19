@@ -21,7 +21,6 @@ BEGIN SCHEMATIC
         SIGNAL CLK
         SIGNAL ReadyIN
         SIGNAL Reset
-        SIGNAL ClkMicro
         SIGNAL ReadyMicro
         SIGNAL ResetMicro
         SIGNAL HighW
@@ -34,7 +33,8 @@ BEGIN SCHEMATIC
         SIGNAL HighR
         SIGNAL LowR
         SIGNAL INTR
-        SIGNAL XLXN_162
+        SIGNAL clkmicro
+        SIGNAL XLXN_2
         PORT Input ADh(3:0)
         PORT Input Ale
         PORT Input DTR
@@ -49,7 +49,6 @@ BEGIN SCHEMATIC
         PORT Input CLK
         PORT Input ReadyIN
         PORT Input Reset
-        PORT Output ClkMicro
         PORT Output ReadyMicro
         PORT Output ResetMicro
         PORT Output HighW
@@ -60,8 +59,9 @@ BEGIN SCHEMATIC
         PORT Output HighR
         PORT Output LowR
         PORT Output INTR
+        PORT Output clkmicro
         BEGIN BLOCKDEF Latch_De_Direcciones
-            TIMESTAMP 2015 4 13 20 44 44
+            TIMESTAMP 2015 4 16 22 38 29
             RECTANGLE N 64 -192 320 0 
             LINE N 64 -160 0 -160 
             RECTANGLE N 0 -108 64 -84 
@@ -72,7 +72,7 @@ BEGIN SCHEMATIC
             LINE N 320 -160 384 -160 
         END BLOCKDEF
         BEGIN BLOCKDEF Trans_Datos
-            TIMESTAMP 2015 4 13 20 44 44
+            TIMESTAMP 2015 4 16 22 38 29
             RECTANGLE N 64 -128 320 0 
             LINE N 64 -96 0 -96 
             LINE N 64 -32 0 -32 
@@ -82,7 +82,7 @@ BEGIN SCHEMATIC
             LINE N 320 -32 384 -32 
         END BLOCKDEF
         BEGIN BLOCKDEF Reg_de_Paginacion
-            TIMESTAMP 2015 4 13 20 44 44
+            TIMESTAMP 2015 4 16 22 38 29
             RECTANGLE N 64 -256 320 0 
             LINE N 64 -224 0 -224 
             LINE N 64 -160 0 -160 
@@ -105,7 +105,7 @@ BEGIN SCHEMATIC
             LINE N 112 -48 48 -48 
         END BLOCKDEF
         BEGIN BLOCKDEF Reloj
-            TIMESTAMP 2015 4 13 20 44 44
+            TIMESTAMP 2015 4 16 22 38 29
             RECTANGLE N 64 -192 320 0 
             LINE N 64 -160 0 -160 
             LINE N 64 -96 0 -96 
@@ -115,7 +115,7 @@ BEGIN SCHEMATIC
             LINE N 320 -32 384 -32 
         END BLOCKDEF
         BEGIN BLOCKDEF IRQControl
-            TIMESTAMP 2015 4 13 23 22 41
+            TIMESTAMP 2015 4 16 22 38 29
             LINE N 64 -480 0 -480 
             LINE N 64 -416 0 -416 
             LINE N 64 -352 0 -352 
@@ -131,7 +131,7 @@ BEGIN SCHEMATIC
             RECTANGLE N 64 -512 320 64 
         END BLOCKDEF
         BEGIN BLOCKDEF LatchBHE
-            TIMESTAMP 2015 4 13 22 18 43
+            TIMESTAMP 2015 4 16 22 38 29
             RECTANGLE N 64 -128 320 0 
             LINE N 64 -96 0 -96 
             LINE N 64 -32 0 -32 
@@ -154,7 +154,7 @@ BEGIN SCHEMATIC
             PIN Clk CLK
             PIN IOReady ReadyIN
             PIN ResetIN Reset
-            PIN Mclk ClkMicro
+            PIN Mclk clkmicro
             PIN Ready ReadyMicro
             PIN ResetOUT ResetMicro
         END BLOCK
@@ -166,7 +166,7 @@ BEGIN SCHEMATIC
         END BLOCK
         BEGIN BLOCK XLXI_14 IRQControl
             PIN Reset ResetMicro
-            PIN Clk ClkMicro
+            PIN Clk CLK
             PIN IRQA INTA
             PIN RD RD
             PIN RW WR
@@ -303,6 +303,8 @@ BEGIN SCHEMATIC
             WIRE 352 784 800 784
             WIRE 800 784 800 1264
             WIRE 800 1264 928 1264
+            WIRE 800 1264 800 1728
+            WIRE 800 1728 928 1728
         END BRANCH
         BEGIN BRANCH ReadyIN
             WIRE 400 848 736 848
@@ -313,14 +315,6 @@ BEGIN SCHEMATIC
             WIRE 368 912 640 912
             WIRE 640 912 640 1392
             WIRE 640 1392 928 1392
-        END BRANCH
-        BEGIN BRANCH ClkMicro
-            WIRE 832 1472 832 1728
-            WIRE 832 1728 928 1728
-            WIRE 832 1472 1392 1472
-            WIRE 1312 1264 1392 1264
-            WIRE 1392 1264 1392 1472
-            WIRE 1392 1264 2688 1264
         END BRANCH
         BEGIN BRANCH ReadyMicro
             WIRE 1312 1328 2688 1328
@@ -442,10 +436,13 @@ BEGIN SCHEMATIC
                 ALIGNMENT SOFT-RIGHT
             END DISPLAY
         END BRANCH
-        IOMARKER 2688 1264 ClkMicro R0 28
+        IOMARKER 2688 1264 clkmicro R0 28
         IOMARKER 2688 1328 ReadyMicro R0 28
         IOMARKER 2672 1392 ResetMicro R0 28
         IOMARKER 416 592 ADl(15:0) R180 28
         BUSTAP 2160 816 2160 912
+        BEGIN BRANCH clkmicro
+            WIRE 1312 1264 2688 1264
+        END BRANCH
     END SHEET
 END SCHEMATIC

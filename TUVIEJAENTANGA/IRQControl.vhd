@@ -89,14 +89,15 @@ begin
 	
 	--registros
 	IRQE <= (Others => '0') when Reset = '1' else Data when (RW = '0' and CS = '0' and Dir(0) = '0');
-	IRQT <= (Others => '0') when Reset = '1';
+	IRQT <= (Others => '0') when Reset = '1' else Data when (RW = '0' and CS = '0' and Dir(0) = '1');
 	
 	--interrupt request
 	IRQR <= '1' when (irq /= "00000000")and end1='0' else '0' when (Reset='1' or flag = '1');
 	
 	--interrupcion después del enable
-	end1 <= '1' when (irq /= "00000000") else '0' when(irqa='1' and cuenta = "10")or(reset='1');
-	S <= (IRQE and IRQ) + IRQT when end1 = '0' else (Others => '0') when (irqa='1' and cuenta="10")or(reset='1'); --
+	--end1 <= '1' when (irq /= "00000000") else '0' when(irqa='1' and cuenta = "10")or(reset='1');
+	end1 <= '0' when(irqa='1' and cuenta = "10")or(reset='1') else '1' when (irq /= "00000000");
+	S <= (IRQE and IRQ) when end1 = '0' else (Others => '0') when (irqa='1' and cuenta="10")or(reset='1'); --
 	
 	--manejo de prioridades
 	J<=     "00000001" when (S(0)='1')
@@ -111,7 +112,7 @@ begin
 		
 	--bus de datos tres estados
 	
-	Data <=  J when (IRQA='0') else
+	Data <=  J + IRQT when (IRQA='0') else
 				IRQE when (RD='0' and CS='0' and Dir(0)='0')else
 				IRQT when (RD='0' and CS='0' and Dir(0)='1')else
 				(Others=>'Z');
