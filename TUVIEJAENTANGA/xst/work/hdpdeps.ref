@@ -1,12 +1,12 @@
-V3 12
-FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/80c86.vhd 2015/04/19.18:16:29 J.36
-EN work/i80c86 1429478197 \
+V3 23
+FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/80c86.vhd 2015/04/19.19:27:38 J.36
+EN work/i80c86 1429482517 \
       FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/80c86.vhd \
       PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
       PB ieee/STD_LOGIC_UNSIGNED 1177545583
-AR work/i80c86/Behavioral 1429478198 \
+AR work/i80c86/Behavioral 1429482518 \
       FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/80c86.vhd \
-      EN work/i80c86 1429478197
+      EN work/i80c86 1429482517
 FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/AM29F040.vhd 2015/04/19.18:04:32 J.36
 EN work/AM29F040 1429477918 \
       FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/AM29F040.vhd \
@@ -31,3 +31,12 @@ EN work/K6T1008 1429477773 \
 AR work/K6T1008/Behavioral 1429477774 \
       FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/K6T1008.vhd \
       EN work/K6T1008 1429477773
+FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/schematic.vhf 2015/04/19.18:58:55 J.36
+EN work/schematic 1429480737 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/schematic.vhf \
+      PB ieee/std_logic_1164 1177545575 PH ieee/NUMERIC_STD 1177545583 LB UNISIM \
+      PH unisim/VCOMPONENTS 1177545586
+AR work/schematic/BEHAVIORAL 1429480738 \
+      FL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/schematic.vhf \
+      EN work/schematic 1429480737 CP Latch_De_Direcciones CP Trans_Datos \
+      CP Reg_de_Paginacion CP OR2 CP Reloj CP IRQControl CP LatchBHE

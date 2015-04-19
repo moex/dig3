@@ -21,3 +21,4 @@ sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Users/Nacho/Docu
 sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TopModule.sch" TopModule.vhf
 sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TopModule.sch" TopModule.vhf
 sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TopModule.sch" TopModule.vhf
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/TopModule.sch" TopModule.vhf

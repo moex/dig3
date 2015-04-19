@@ -34,7 +34,6 @@ BEGIN SCHEMATIC
         SIGNAL LowR
         SIGNAL INTR
         SIGNAL clkmicro
-        SIGNAL XLXN_2
         PORT Input ADh(3:0)
         PORT Input Ale
         PORT Input DTR
@@ -267,9 +266,11 @@ BEGIN SCHEMATIC
         END BRANCH
         BEGIN BRANCH Puertos(15:0)
             WIRE 1504 816 2160 816
-            WIRE 2160 816 2496 816
-            WIRE 2496 592 2496 816
+            WIRE 2160 816 2336 816
+            WIRE 2336 816 2496 816
             WIRE 2496 592 2576 592
+            WIRE 2496 592 2496 800
+            WIRE 2496 800 2496 816
         END BRANCH
         BEGIN BRANCH CHIPs(2:0)
             WIRE 2416 400 2592 400

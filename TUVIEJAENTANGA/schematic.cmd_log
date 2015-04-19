@@ -3,3 +3,4 @@ sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Users/Nacho/Docu
 sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/schematic.sch" schematic.vhf
 sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/schematic.sch" schematic.vhf
 sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/schematic.sch" schematic.vhf
+sch2vhdl -intstyle ise -family spartan3e -flat -suppress -w "C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/schematic.sch" schematic.vhf

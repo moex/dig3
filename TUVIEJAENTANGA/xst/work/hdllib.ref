@@ -1,8 +1,10 @@
 EN k6t1008 NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/K6T1008.vhd sub00/vhpl04 1429477773
-EN i80c86 NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/80c86.vhd sub00/vhpl06 1429478197
+EN i80c86 NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/80c86.vhd sub00/vhpl06 1429482517
 AR k6t1008 behavioral C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/K6T1008.vhd sub00/vhpl05 1429477774
 EN irqcontrol NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd sub00/vhpl00 1429475559
-AR i80c86 behavioral C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/80c86.vhd sub00/vhpl07 1429478198
+AR schematic behavioral C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/schematic.vhf sub00/vhpl09 1429480738
+AR i80c86 behavioral C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/80c86.vhd sub00/vhpl07 1429482518
 EN am29f040 NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/AM29F040.vhd sub00/vhpl02 1429477918
+EN schematic NULL C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/schematic.vhf sub00/vhpl08 1429480737
 AR am29f040 behavioral C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/AM29F040.vhd sub00/vhpl03 1429477919
 AR irqcontrol behavioral C:/Users/Nacho/Documents/GitHub/dig3/TUVIEJAENTANGA/IRQControl.vhd sub00/vhpl01 1429475560

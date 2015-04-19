@@ -2,11 +2,11 @@
    ./TopLevelTest_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  50994
+     -ipcport  52533
 
-Sun Apr 19 17:41:25 2015
+Sun Apr 19 19:00:54 2015
 
-Total Line Count : 332
+Total Line Count : 333
 
  Elaboration time : 0.0156 sec.
 
@@ -39,11 +39,11 @@ ntrace select -o on -n /TopLevelTest/readymicro
 ntrace select -o on -n /TopLevelTest/resetmicro 
 ntrace select -o on -n /TopLevelTest/adcomp 
 ntrace select -o on -n /TopLevelTest/puertos 
-ntrace select -o on -n /TopLevelTest/inta 
 ntrace select -o on -n /TopLevelTest/irq 
 ntrace select -o on -n /TopLevelTest/UUT/XLXI_14/irqe 
 ntrace select -o on -n /TopLevelTest/UUT/XLXI_14/irqt 
 ntrace select -o on -n /TopLevelTest/intr 
+ntrace select -o on -n /TopLevelTest/inta 
 ntrace select -o on -n /TopLevelTest/UUT/XLXI_14/end1 
 ntrace select -o on -n /TopLevelTest/UUT/XLXI_14/cuenta 
 ntrace select -o on -n /TopLevelTest/UUT/XLXI_14/reg 
@@ -57,9 +57,9 @@ isimrun 1000 ns
 isimrun 1000 ns 
 isimrun 1000 ns 
 
- Simulation time 0.0624 sec.
+ Simulation time 0.078 sec.
 
  Estimate current memory usage : 163.242 Meg. 
 
-Sun Apr 19 18:27:45 2015
+Sun Apr 19 19:56:42 2015
 

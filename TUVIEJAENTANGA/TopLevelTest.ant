@@ -8,7 +8,7 @@
 -- \   \   \/     Version : 9.2i
 --  \   \         Application : ISE
 --  /   /         Filename : TopLevelTest.ant
--- /___/   /\     Timestamp : Sun Apr 19 17:37:20 2015
+-- /___/   /\     Timestamp : Sun Apr 19 19:00:43 2015
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -50,7 +50,7 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
             WR : In std_logic;
             ADComp : Out std_logic_vector (19 DownTo 0);
             CHIPs : Out std_logic_vector (2 DownTo 0);
-            ClkMicro : Out std_logic;
+            clkmicro : Out std_logic;
             HighR : Out std_logic;
             HighW : Out std_logic;
             INTR : Out std_logic;
@@ -78,7 +78,7 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
     SIGNAL WR : std_logic := '0';
     SIGNAL ADComp : std_logic_vector (19 DownTo 0) := "00000000000000000000";
     SIGNAL CHIPs : std_logic_vector (2 DownTo 0) := "000";
-    SIGNAL ClkMicro : std_logic := '0';
+    SIGNAL clkmicro : std_logic := '0';
     SIGNAL HighR : std_logic := '0';
     SIGNAL HighW : std_logic := '0';
     SIGNAL INTR : std_logic := '0';
@@ -114,7 +114,7 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
             WR => WR,
             ADComp => ADComp,
             CHIPs => CHIPs,
-            ClkMicro => ClkMicro,
+            clkmicro => clkmicro,
             HighR => HighR,
             HighW => HighW,
             INTR => INTR,
@@ -170,7 +170,7 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
                 STD.TEXTIO.writeline(RESULTS, TX_LOC);
                 STD.TEXTIO.Deallocate(TX_LOC);
             END;
-            PROCEDURE ANNOTATE_ClkMicro(
+            PROCEDURE ANNOTATE_clkmicro(
                 TX_TIME : INTEGER
             ) IS
                 VARIABLE TX_STR : String(1 to 4096);
@@ -178,8 +178,8 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
             BEGIN
                 STD.TEXTIO.write(TX_LOC, string'("Annotate["));
                 STD.TEXTIO.write(TX_LOC, TX_TIME);
-                STD.TEXTIO.write(TX_LOC, string'(", ClkMicro, "));
-                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, ClkMicro);
+                STD.TEXTIO.write(TX_LOC, string'(", clkmicro, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, clkmicro);
                 STD.TEXTIO.write(TX_LOC, string'("]"));
                 TX_STR(TX_LOC.all'range) := TX_LOC.all;
                 STD.TEXTIO.writeline(RESULTS, TX_LOC);
@@ -294,7 +294,7 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
             WAIT for 1 fs;
             ANNOTATE_ADComp(0);
             ANNOTATE_CHIPs(0);
-            ANNOTATE_ClkMicro(0);
+            ANNOTATE_clkmicro(0);
             ANNOTATE_HighR(0);
             ANNOTATE_HighW(0);
             ANNOTATE_INTR(0);
@@ -310,7 +310,7 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
                 TX_TIME := TX_TIME + 25000;
                 ANNOTATE_ADComp(TX_TIME);
                 ANNOTATE_CHIPs(TX_TIME);
-                ANNOTATE_ClkMicro(TX_TIME);
+                ANNOTATE_clkmicro(TX_TIME);
                 ANNOTATE_HighR(TX_TIME);
                 ANNOTATE_HighW(TX_TIME);
                 ANNOTATE_INTR(TX_TIME);
@@ -398,7 +398,7 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
                 -- -------------------------------------
                 -- -------------  Current Time:  1.505e+006ps
                 WAIT FOR 120000 ps;
-                IRQ <= "00000010";
+                IRQ <= "00000011";
                 -- -------------------------------------
                 -- -------------  Current Time:  1.585e+006ps
                 WAIT FOR 80000 ps;
@@ -434,7 +434,7 @@ ARCHITECTURE testbench_arch OF TopLevelTest IS
                 -- -------------------------------------
                 -- -------------  Current Time:  1.945e+006ps
                 WAIT FOR 120000 ps;
-                IRQ <= "00010101";
+                IRQ <= "00000000";
                 -- -------------------------------------
                 -- -------------  Current Time:  2.065e+006ps
                 WAIT FOR 120000 ps;
