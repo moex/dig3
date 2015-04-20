@@ -35,7 +35,7 @@ entity Reg_de_Paginacion is
            WR : in  STD_LOGIC);
 end Reg_de_Paginacion;
 
-architecture Fermin of Reg_de_Paginacion is
+architecture Behavioral of Reg_de_Paginacion is
 signal Reg : std_logic_vector (7 downto 0);
 signal Dir : std_logic_vector (3 downto 0);
 Signal ent : std_logic_vector (7 downto 0);
@@ -48,5 +48,5 @@ begin
 	S <= "001" when reg(5)&reg(4)&reg(3) = "001" else "010" when reg(5)&reg(4)&reg(3) = "010" else "100" when reg(5)&reg(4)&reg(3) = "100" else "000";
 
 
-end Fermin;
+end Behavioral;
 

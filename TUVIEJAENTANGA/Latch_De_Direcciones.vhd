@@ -34,10 +34,10 @@ entity Latch_De_Direcciones is
            ALE : in  STD_LOGIC);
 end Latch_De_Direcciones;
 
-architecture PACO of Latch_De_Direcciones is
+architecture Behavioral of Latch_De_Direcciones is
 begin
 
 	S <= Dirh & Dirl when ALE = '1'; 
 
-end PACO;
+end Behavioral;
 

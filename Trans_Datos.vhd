@@ -34,7 +34,7 @@ entity Trans_Datos is
            Den : in  STD_LOGIC);
 end Trans_Datos;
 
-architecture PACO2 of Trans_Datos is
+architecture Behavioral of Trans_Datos is
 
 begin
 
@@ -42,5 +42,5 @@ begin
 	Datin <= Datout when Dtr = '0' and Den = '0' else (others => 'Z');
 
 
-end PACO2;
+end Behavioral;
 
