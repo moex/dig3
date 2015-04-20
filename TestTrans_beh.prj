@@ -1,2 +1,0 @@
-vhdl work "../Dig3/dig3/Trans_Datos.vhd"
-vhdl work "TestTrans.vhw"
